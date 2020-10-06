@@ -11,7 +11,9 @@ class TestCaseMubuCreateDoc(HttpRunner):
         Config("testcase description")
         .verify(False)
         .base_url("https://mubu.com")
-        .variables(**{"host": "mubu.com"})
+        .variables(
+            **{"host": "mubu.com", "phone": "18383157715", "password": "749511.Tll@"}
+        )
     )
 
     teststeps = [
@@ -140,9 +142,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "SLARDAR_WEB_ID": "17596d70-19bd-4759-877e-276124cc85cd",
                 }
             )
-            .with_data(
-                {"phone": "18383157715", "password": "749511.Tll@", "remember": "true"}
-            )
+            .with_data({"phone": "$phone", "password": "$password", "remember": "true"})
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
