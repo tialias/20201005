@@ -376,14 +376,16 @@ class TestCaseMubuCreateDoc(HttpRunner):
                 }
             )
             .with_data({"folderId": "0", "type": "0"})
+            .extract()
+            .with_jmespath("body.data.id", "docId")
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
             .assert_equal("body.msg", None)
         ),
         Step(
-            RunRequest("/docfXnCpA2tjr")
-            .get("https://mubu.com/docfXnCpA2tjr")
+            RunRequest("/doc$docId")
+            .get("https://mubu.com/doc$docId")
             .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
@@ -440,7 +442,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -466,12 +468,12 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json({"docId": "fXnCpA2tjr"})
+            .with_json({"docId": "$docId"})
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
@@ -492,12 +494,12 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json({"document_id": "fXnCpA2tjr"})
+            .with_json({"document_id": "$docId"})
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
@@ -517,7 +519,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -541,7 +543,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -564,7 +566,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -576,7 +578,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
         Step(
             RunRequest("/v3/api/colla/members")
             .options("https://api2.mubu.com/v3/api/colla/members")
-            .with_params(**{"memberId": "4494579429928814", "documentId": "fXnCpA2tjr"})
+            .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
             .with_headers(
                 **{
                     "accept": "*/*",
@@ -586,7 +588,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-mode": "cors",
                     "sec-fetch-site": "same-site",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
@@ -598,7 +600,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
         Step(
             RunRequest("/v3/api/colla/members")
             .get("https://api2.mubu.com/v3/api/colla/members")
-            .with_params(**{"memberId": "4494579429928814", "documentId": "fXnCpA2tjr"})
+            .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
             .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
@@ -611,7 +613,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -638,7 +640,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -649,11 +651,11 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "messageType": "BROADCAST",
                     "reqId": 3,
                     "requestId": "MESSAGE:4819515:4494579429928814:3",
-                    "token": "fXnCpA2tjr",
+                    "token": "$docId",
                     "data": {
                         "message": {
                             "type": "CHANGE",
-                            "documentId": "fXnCpA2tjr",
+                            "documentId": "$docId",
                             "version": 0,
                             "content": [
                                 {"name": "nameChanged", "title": "d", "original": ""},
@@ -691,7 +693,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "sec-fetch-site": "same-site",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mubu.com/docfXnCpA2tjr",
+                    "referer": "https://mubu.com/doc$docId",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -702,11 +704,11 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "messageType": "BROADCAST",
                     "reqId": 5,
                     "requestId": "MESSAGE:4819515:4494579429928814:5",
-                    "token": "fXnCpA2tjr",
+                    "token": "$docId",
                     "data": {
                         "message": {
                             "type": "CHANGE",
-                            "documentId": "fXnCpA2tjr",
+                            "documentId": "$docId",
                             "version": 1,
                             "content": [
                                 {
