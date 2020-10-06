@@ -6,21 +6,21 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 
 
 class TestCaseMubuCreateDoc(HttpRunner):
-
     config = (
         Config("testcase description")
-        .verify(False)
-        .base_url("https://mubu.com")
-        .variables(
+            .verify(False)
+            .base_url("https://mubu.com")
+            .variables(
             **{"host": "mubu.com", "phone": "18383157715", "password": "749511.Tll@"}
         )
+            .variables(title="demo00345")
     )
 
     teststeps = [
         Step(
             RunRequest("/login")
-            .get("/login")
-            .with_headers(
+                .get("/login")
+                .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
                     "user-agent": "HttpRunner/${get_httprunner_version()}",
@@ -34,7 +34,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -56,13 +56,13 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1601992738",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
+                .validate()
+                .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("/login/password")
-            .get("/login/password")
-            .with_headers(
+                .get("/login/password")
+                .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
                     "user-agent": "HttpRunner/${get_httprunner_version()}",
@@ -76,7 +76,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -98,13 +98,13 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "reg_focusId": "b3b191a1-0714-4e82-b429-174fe356250",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
+                .validate()
+                .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("/api/login/submit")
-            .post("/api/login/submit")
-            .with_headers(
+                .post("/api/login/submit")
+                .with_headers(
                 **{
                     "content-length": "54",
                     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -120,7 +120,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -142,17 +142,17 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "SLARDAR_WEB_ID": "17596d70-19bd-4759-877e-276124cc85cd",
                 }
             )
-            .with_data({"phone": "$phone", "password": "$password", "remember": "true"})
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
-            .assert_equal("body.msg", None)
-            .assert_equal("body.data.next", "/list")
+                .with_data({"phone": "$phone", "password": "$password", "remember": "true"})
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
+                .assert_equal("body.msg", None)
+                .assert_equal("body.data.next", "/list")
         ),
         Step(
             RunRequest("/list")
-            .get("/list")
-            .with_headers(
+                .get("/list")
+                .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
                     "user-agent": "HttpRunner/${get_httprunner_version()}",
@@ -166,7 +166,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -190,13 +190,13 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "user_persistence": "f1031bb3-c69a-42db-a99c-727bf2d4a7ac",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
+                .validate()
+                .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("/api/list/tip_new_update")
-            .post("/api/list/tip_new_update")
-            .with_headers(
+                .post("/api/list/tip_new_update")
+                .with_headers(
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -211,7 +211,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -235,16 +235,16 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "user_persistence": "f1031bb3-c69a-42db-a99c-727bf2d4a7ac",
                 }
             )
-            .with_data("")
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
-            .assert_equal("body.msg", None)
+                .with_data("")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
+                .assert_equal("body.msg", None)
         ),
         Step(
             RunRequest("/api/list/get")
-            .post("/api/list/get")
-            .with_headers(
+                .post("/api/list/get")
+                .with_headers(
                 **{
                     "content-length": "38",
                     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -260,7 +260,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -284,20 +284,20 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "user_persistence": "f1031bb3-c69a-42db-a99c-727bf2d4a7ac",
                 }
             )
-            .with_data({"folderId": "0", "sort": "time", "keywords": "", "source": ""})
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
-            .assert_equal("body.msg", None)
-            .assert_equal("body.data.folderId", "0")
-            .assert_length_greater_than("body.data.folders", 1)
-            .assert_equal("body.data.folders[0].name", "在线收款测试设计")
+                .with_data({"folderId": "0", "sort": "time", "keywords": "", "source": ""})
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
+                .assert_equal("body.msg", None)
+                .assert_equal("body.data.folderId", "0")
+                .assert_length_greater_than("body.data.folders", 1)
+                .assert_equal("body.data.folders[0].name", "在线收款测试设计")
 
         ),
         Step(
             RunRequest("/api/message/get_message_unread")
-            .post("/api/message/get_message_unread")
-            .with_headers(
+                .post("/api/message/get_message_unread")
+                .with_headers(
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -312,7 +312,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -336,16 +336,16 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "user_persistence": "f1031bb3-c69a-42db-a99c-727bf2d4a7ac",
                 }
             )
-            .with_data("")
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
-            .assert_equal("body.msg", None)
+                .with_data("")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
+                .assert_equal("body.msg", None)
         ),
         Step(
             RunRequest("/api/list/create_doc")
-            .post("/api/list/create_doc")
-            .with_headers(
+                .post("/api/list/create_doc")
+                .with_headers(
                 **{
                     "content-length": "17",
                     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -361,7 +361,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -385,18 +385,18 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1601992753",
                 }
             )
-            .with_data({"folderId": "0", "type": "0"})
-            .extract()
-            .with_jmespath("body.data.id", "docId")
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
-            .assert_equal("body.msg", None)
+                .with_data({"folderId": "0", "type": "0"})
+                .extract()
+                .with_jmespath("body.data.id", "docId")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
+                .assert_equal("body.msg", None)
         ),
         Step(
             RunRequest("/doc$docId")
-            .get("/doc$docId")
-            .with_headers(
+                .get("/doc$docId")
+                .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
                     "user-agent": "HttpRunner/${get_httprunner_version()}",
@@ -410,7 +410,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_cookies(
+                .with_cookies(
                 **{
                     "data_unique_id": "729aece6-2548-4e43-b941-785e0037bb34",
                     "csrf_token": "9b6090ce-e102-4c4b-9d7c-b944959d3934",
@@ -434,13 +434,13 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1601992753",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
+                .validate()
+                .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("/v3/api/user/current_user")
-            .post("https://api2.${host}/v3/api/user/current_user")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/user/current_user")
+                .with_headers(
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/plain, */*",
@@ -457,15 +457,15 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_data("")
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .with_data("")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/document/get")
-            .post("https://api2.${host}/v3/api/document/get")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/document/get")
+                .with_headers(
                 **{
                     "content-length": "22",
                     "accept": "application/json, text/plain, */*",
@@ -483,15 +483,15 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json({"docId": "$docId"})
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .with_json({"docId": "$docId"})
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/user/current_level")
-            .post("https://api2.${host}/v3/api/user/current_level")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/user/current_level")
+                .with_headers(
                 **{
                     "content-length": "28",
                     "accept": "application/json, text/plain, */*",
@@ -509,15 +509,15 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json({"document_id": "$docId"})
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .with_json({"document_id": "$docId"})
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/user/get_user_params")
-            .post("https://api2.${host}/v3/api/user/get_user_params")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/user/get_user_params")
+                .with_headers(
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/plain, */*",
@@ -534,15 +534,15 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_data("")
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .with_data("")
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/user/get_invite_count")
-            .get("https://api2.${host}/v3/api/user/get_invite_count")
-            .with_headers(
+                .get("https://api2.${host}/v3/api/user/get_invite_count")
+                .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiNDgxOTUxNSIsImV4cCI6MTYwNDU4NDc1MiwiaWF0IjoxNjAxOTkyNzUyfQ.N-kNMHFqrI7GZbbhfkno1VJl-BGwmCDt2GHUeUnu5amJKL7zsxDJSGVRIXfcLCqEeSXbiTeuarfhMdn_U3kN_w",
@@ -558,14 +558,14 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/colla/register")
-            .get("https://api2.${host}/v3/api/colla/register")
-            .with_headers(
+                .get("https://api2.${host}/v3/api/colla/register")
+                .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiNDgxOTUxNSIsImV4cCI6MTYwNDU4NDc1MiwiaWF0IjoxNjAxOTkyNzUyfQ.N-kNMHFqrI7GZbbhfkno1VJl-BGwmCDt2GHUeUnu5amJKL7zsxDJSGVRIXfcLCqEeSXbiTeuarfhMdn_U3kN_w",
@@ -581,15 +581,15 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/colla/members")
-            .options("https://api2.${host}/v3/api/colla/members")
-            .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
-            .with_headers(
+                .options("https://api2.${host}/v3/api/colla/members")
+                .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
+                .with_headers(
                 **{
                     "accept": "*/*",
                     "access-control-request-method": "GET",
@@ -604,14 +604,14 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
+                .validate()
+                .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("/v3/api/colla/members")
-            .get("https://api2.${host}/v3/api/colla/members")
-            .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
-            .with_headers(
+                .get("https://api2.${host}/v3/api/colla/members")
+                .with_params(**{"memberId": "4494579429928814", "documentId": "$docId"})
+                .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiNDgxOTUxNSIsImV4cCI6MTYwNDU4NDc1MiwiaWF0IjoxNjAxOTkyNzUyfQ.N-kNMHFqrI7GZbbhfkno1VJl-BGwmCDt2GHUeUnu5amJKL7zsxDJSGVRIXfcLCqEeSXbiTeuarfhMdn_U3kN_w",
@@ -628,14 +628,14 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/colla/message")
-            .post("https://api2.${host}/v3/api/colla/message")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/colla/message")
+                .with_headers(
                 **{
                     "content-length": "403",
                     "member-id": "4494579429928814",
@@ -655,7 +655,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json(
+                .with_json(
                 {
                     "engineType": "MUBU",
                     "messageType": "BROADCAST",
@@ -681,14 +681,14 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     },
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
         Step(
             RunRequest("/v3/api/colla/message")
-            .post("https://api2.${host}/v3/api/colla/message")
-            .with_headers(
+                .post("https://api2.${host}/v3/api/colla/message")
+                .with_headers(
                 **{
                     "content-length": "411",
                     "member-id": "4494579429928814",
@@ -708,7 +708,7 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
             )
-            .with_json(
+                .with_json(
                 {
                     "engineType": "MUBU",
                     "messageType": "BROADCAST",
@@ -721,15 +721,11 @@ class TestCaseMubuCreateDoc(HttpRunner):
                             "documentId": "$docId",
                             "version": 1,
                             "content": [
+
                                 {
                                     "name": "nameChanged",
-                                    "title": "dem",
-                                    "original": "de",
-                                },
-                                {
-                                    "name": "nameChanged",
-                                    "title": "demo",
-                                    "original": "dem",
+                                    "title": "$title",
+                                    "original": " ",
                                 },
                             ],
                         }
@@ -742,9 +738,9 @@ class TestCaseMubuCreateDoc(HttpRunner):
                     },
                 }
             )
-            .validate()
-            .assert_equal("status_code", 200)
-            .assert_equal("body.code", 0)
+                .validate()
+                .assert_equal("status_code", 200)
+                .assert_equal("body.code", 0)
         ),
     ]
 
