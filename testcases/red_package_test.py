@@ -159,6 +159,7 @@ class TestCaseRedPackage(HttpRunner):
                     }
                 ]
             )
+
             .validate()
             .assert_equal("status_code", 200)
         ),
