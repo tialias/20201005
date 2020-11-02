@@ -42,6 +42,8 @@ class TestCaseMulField(HttpRunner):
                     "_gat_gtag_UA_48208031_13": "1",
                 }
             )
+            .extract()
+            .with_jmespath("body", "html_text")
             .validate()
             .assert_equal("status_code", 200)
         ),
