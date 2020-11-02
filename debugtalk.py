@@ -19,8 +19,10 @@ def gen_nodeId():
     return str(uuid.uuid4())
 
 
+name_list = []
+
+
 def get_random_name():
     fake = Faker("zh_CN")
     name = fake.name()
-
-    return [name, name]
+    return name

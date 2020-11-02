@@ -7,8 +7,11 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 
 class TestCaseTextRepeatSubmit(HttpRunner):
 
-    config = Config("testcase description").verify(False)
-
+    config = (
+        Config("testcase description")
+        .verify(False)
+        .variables(**{"field_1_name": "${get_random_name()}"})
+    )
     teststeps = [
         Step(
             RunRequest("打开表单")
@@ -83,7 +86,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "variables": {
                         "input": {
                             "formId": "FvUXs9",
-                            "entryAttributes": {"field_1": "${get_random_name()}"},
+                            "entryAttributes": {"field_1": "$field_1_name"},
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
@@ -104,6 +107,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     },
                 }
             )
+            .extract()
             .validate()
             .assert_equal("status_code", 200)
         ),
@@ -192,7 +196,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "variables": {
                         "input": {
                             "formId": "FvUXs9",
-                            "entryAttributes": {"field_1": "${get_random_name()}"[1]},
+                            "entryAttributes": {"field_1": "$field_1_name"},
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
@@ -214,7 +218,8 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                 }
             )
             .validate()
-            .assert_equal("status_code", 200)
+            .assert_equal("body.data.createPublishedFormEntry.errors[0].code", 400)
+            .assert_equal("body.data.createPublishedFormEntry.errors[0].message", "姓名已被占用")
         ),
     ]
 
