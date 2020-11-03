@@ -1,4 +1,8 @@
+import json
+import re
 import time, uuid
+
+import jmespath
 from faker import Faker
 from httprunner import __version__
 
@@ -19,10 +23,21 @@ def gen_nodeId():
     return str(uuid.uuid4())
 
 
-name_list = []
-
-
 def get_random_name():
     fake = Faker("zh_CN")
     name = fake.name()
     return name
+
+
+def print_html(html_text):
+
+    m = re.findall(r"GD.publishedFormData = (.+?);", html_text.text)
+
+    publishformdata = json.loads(m[0])
+    nodes = "data.publishedForm.form.fields.nodes"
+    result = jmespath.search(nodes, publishformdata)
+    field_code_type = {}
+    for i in range(len(result)):
+        field_node = result[i]
+        field_code_type[field_node["apiCode"]] = field_node["type"]
+    print(field_code_type)
