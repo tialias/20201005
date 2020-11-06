@@ -1,10 +1,13 @@
 import json
+import random
 import re
-import time, uuid
+import time , uuid
 
 import jmespath
 from faker import Faker
 from httprunner import __version__
+
+fake = Faker("zh_CN")
 
 
 def get_httprunner_version():
@@ -29,15 +32,33 @@ def get_random_name():
     return name
 
 
-def print_html(html_text):
+def get_field_codetype(html_text):
 
     m = re.findall(r"GD.publishedFormData = (.+?);", html_text.text)
-
     publishformdata = json.loads(m[0])
     nodes = "data.publishedForm.form.fields.nodes"
     result = jmespath.search(nodes, publishformdata)
-    field_code_type = {}
+    field_code_data = {}
     for i in range(len(result)):
-        field_node = result[i]
-        field_code_type[field_node["apiCode"]] = field_node["type"]
-    print(field_code_type)
+        if result[i]["type"] == "TextField":
+            field_code_data[result[i]["apiCode"]] = textfield_data()
+        elif result[i]["type"] == "TextArea":
+            field_code_data[result[i]["apiCode"]] = textarea_data()
+        elif result[i]["type"] == "RadioButton":
+            field_code_data[result[i]["apiCode"]] = radiobutton_data(result[i])
+    return field_code_data
+
+
+def textfield_data():
+
+    return fake.name()
+
+
+def textarea_data():
+    return fake.text()
+
+
+def radiobutton_data(radiobutton_field):
+
+    random_choice = random.choice(radiobutton_field["choices"])
+    return random_choice["value"]
