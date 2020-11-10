@@ -47,13 +47,13 @@ def get_field_codetype(html_text):
         elif result[i]["type"] == "RadioButton":
             field_code_data[result[i]["apiCode"]] = radiobutton_data(result[i])
         elif result[i]["type"] == "NameField":
-            field_code_data[result[i]["apiCode"]] = textarea_data()
+            field_code_data[result[i]["apiCode"]] = namefield_data()
     return field_code_data
 
 
 def textfield_data():
 
-    return fake.name()
+    return fake.pystr()
 
 
 def textarea_data():
