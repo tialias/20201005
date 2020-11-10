@@ -6,9 +6,7 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 
 
 class TestCaseMulField(HttpRunner):
-    config = Config("testcase description")\
-        .verify(False)\
-        .export(*["a_response"])
+    config = Config("testcase description").verify(False).export("a_response")
 
     teststeps = [
         Step(
@@ -43,61 +41,11 @@ class TestCaseMulField(HttpRunner):
                     "_gat_gtag_UA_48208031_13": "1",
                 }
             )
-            .teardown_hook("${get_field_codetype($response)}", "a_response")
             .extract()
+            .with_jmespath("body", "a_response")
             .validate()
             .assert_equal("status_code", 200)
         ),
-        # Step(
-        #     RunRequest("/graphql")
-        #     .post("https://mo.jinshuju.net/graphql")
-        #     .with_headers(
-        #         **{
-        #             "content-length": "204",
-        #             "accept": "*/*",
-        #             "x-csrf-token": "/acWuMPVyrfFTQ2LBJ0rlFl7fiLrhypMcg7ztLrU4n/poMWMzJJ/2ZBBU33DtDTCRIApNnH63yqhejFrekWuVQ==",
-        #             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
-        #             "content-type": "application/json;charset=UTF-8",
-        #             "origin": "https://mo.jinshuju.net",
-        #             "sec-fetch-site": "same-origin",
-        #             "sec-fetch-mode": "cors",
-        #             "sec-fetch-dest": "empty",
-        #             "referer": "https://mo.jinshuju.net/f/jDRmyn",
-        #             "accept-encoding": "gzip, deflate, br",
-        #             "accept-language": "zh-CN,zh;q=0.9",
-        #         }
-        #     )
-        #     .with_cookies(
-        #         **{
-        #             "jsj_uid": "ad89599c-2a40-42d0-af2b-e092b36f051b",
-        #             "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1604311834",
-        #             "filled_form_scene": "form",
-        #             "_ga": "GA1.2.374196750.1604311835",
-        #             "_gid": "GA1.2.1293992417.1604311835",
-        #             "_gat_gtag_UA_48208031_13": "1",
-        #             "start_filling_time_jDRmyn": "1604311841",
-        #             "_gd_session": "TkwxWUg4WEJIVnFCMStNekU2OEhaTDRabDlhZmZPK04yTlVCTXhkWk9OSkVRLzRpZ3FWaXk1d0tFRXl3ejVQOHFFU0dxeWRVSUpUSUhrT0VZY0FMR2RUK3ZrMGRsRC93ZExaSUZUYXo1bGlaVUpmYTlwODFVTmZtdlRPMUhOMkNmaDRjczdZc1hNMURVVGxEdEZsdGJ3PT0tLVZlY0w1aHZDK1NGc0NMZ00vTWFUMHc9PQ%3D%3D--51ccd1343a0863745855e0fa43c436a02597d837",
-        #             "csrf_token": "/acWuMPVyrfFTQ2LBJ0rlFl7fiLrhypMcg7ztLrU4n/poMWMzJJ/2ZBBU33DtDTCRIApNnH63yqhejFrekWuVQ==",
-        #             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1604311843",
-        #         }
-        #     )
-        #     .with_json(
-        #         [
-        #             {
-        #                 "operationName": "ShowFeature",
-        #                 "variables": {"key": "should_use_mobile_view"},
-        #                 "extensions": {
-        #                     "persistedQuery": {
-        #                         "version": 1,
-        #                         "sha256Hash": "69bac8320cb0db576c6d775ff9cda9c9de3ffbfdab3a8010e57eda56ef10e73d",
-        #                     }
-        #                 },
-        #             }
-        #         ]
-        #     )
-        #     .validate()
-        #     .assert_equal("status_code", 200)
-        # ),
         Step(
             RunRequest("/graphql/f/jDRmyn")
             .post("https://mo.jinshuju.net/graphql/f/jDRmyn")
@@ -137,13 +85,7 @@ class TestCaseMulField(HttpRunner):
                     "variables": {
                         "input": {
                             "formId": "jDRmyn",
-                            "entryAttributes": {
-                                "field_1": "123",
-                                "field_2": "yO3D",
-                                "field_3": "张三",
-                                "field_4": "18383157715",
-                                "field_5": "vvtianll@163.com",
-                            },
+                            "entryAttributes": "${get_field_codetype($a_response)}",
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
