@@ -47,7 +47,11 @@ def get_field_codetype(html_text):
         elif result[i]["type"] == "RadioButton":
             field_code_data[result[i]["apiCode"]] = radiobutton_data(result[i])
         elif result[i]["type"] == "NameField":
-            field_code_data[result[i]["apiCode"]] = namefield_data()
+            field_code_data[result[i]["apiCode"]] = name_field_data()
+        elif result[i]["type"] == "MobileField":
+            field_code_data[result[i]["apiCode"]] = mobile_field_data()
+        elif result[i]["type"] == "EmailField":
+            field_code_data[result[i]["apiCode"]] = email_field_data()
     return field_code_data
 
 
@@ -66,5 +70,13 @@ def radiobutton_data(radiobutton_field):
     return random_choice["value"]
 
 
-def namefield_data():
+def name_field_data():
     return fake.name()
+
+
+def mobile_field_data():
+    return fake.phone_number()
+
+
+def email_field_data():
+    return fake.email()

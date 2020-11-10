@@ -11,7 +11,7 @@ class TestCaseMulField(HttpRunner):
     teststeps = [
         Step(
             RunRequest("/f/jDRmyn")
-            .get("https://mo.jinshuju.net/f/jDRmyn")
+            .get("https://mo.jinshuju.net/f/OHgnwc")
             .with_headers(
                 **{
                     "cache-control": "max-age=0",
@@ -48,7 +48,7 @@ class TestCaseMulField(HttpRunner):
         ),
         Step(
             RunRequest("/graphql/f/jDRmyn")
-            .post("https://mo.jinshuju.net/graphql/f/jDRmyn")
+            .post("https://mo.jinshuju.net/graphql/f/OHgnwc")
             .with_headers(
                 **{
                     "content-length": "581",
@@ -84,7 +84,7 @@ class TestCaseMulField(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "jDRmyn",
+                            "formId": "OHgnwc",
                             "entryAttributes": "${get_field_codetype($a_response)}",
                             "captchaData": None,
                             "weixinAccessToken": None,
@@ -110,8 +110,8 @@ class TestCaseMulField(HttpRunner):
             .assert_equal("status_code", 200)
         ),
         Step(
-            RunRequest("/f/jDRmyn/success")
-            .get("https://mo.jinshuju.net/f/jDRmyn/success")
+            RunRequest("/f/OHgnwc/success")
+            .get("https://mo.jinshuju.net/f/OHgnwc/success")
             .with_params(
                 **{
                     "e_token": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjpbIlNNM0s5d1MzIiwiNWY5ZmQwMjg1YjY1MTY0NTRjNzA3NDM3Il0sImV4cCI6MTYwNDM5ODI2MH0.vVHJ3Mz4rpVWNGouEBUTrPMjzZjvvjdUq8gcO4ekEaU"
