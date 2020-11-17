@@ -8,7 +8,7 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 class TestCaseTextRepeatSubmit(HttpRunner):
 
     config = (
-        Config("testcase description")
+        Config("单行文本不能和已有数据重复")
         .verify(False)
         .variables(**{"field_1_name": "${get_random_name()}"})
     )

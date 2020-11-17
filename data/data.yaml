@@ -1,0 +1,9 @@
+---
+Test:
+ desc: "测试单行文本不能重复"
+ parameters:
+  -
+    query:
+      pushID: 869760033631713
+    assert_code: 200
+    assert_in_text: 登录成功

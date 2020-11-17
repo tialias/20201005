@@ -7,7 +7,7 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 
 class TestCaseNormalSubmit(HttpRunner):
 
-    config = Config("testcase description").verify(False)
+    config = Config("单行文本正确提交").verify(False)
 
     teststeps = [
         Step(
