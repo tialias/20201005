@@ -6,7 +6,6 @@ from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 
 
 class TestCaseTextRepeatSubmit(HttpRunner):
-
     config = (
         Config("单行文本不能和已有数据重复")
         .verify(False)
@@ -219,7 +218,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
             )
             .validate()
             .assert_equal("body.data.createPublishedFormEntry.errors[0].code", 400)
-            .assert_equal("body.data.createPublishedFormEntry.errors[0].message", "姓名已被占用")
+            .assert_equal("body.data.createPublishedFormEntry.errors[0].message", "姓名已被占用123")
         ),
     ]
 

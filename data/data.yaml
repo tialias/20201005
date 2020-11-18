@@ -1,9 +1,19 @@
 ---
-Test:
- desc: "测试单行文本不能重复"
- parameters:
+normal_submit_test:
   -
-    query:
+  desc: "单行文本正确提交"
+  parameters:
+    token: "yNxDGQ"
+    data: "${get_field_codetype($a_response)}"
+  assert_code: 200
+  -
+  desc: "单行文本正确提交"
+  parameters:
+    token: "yNxDGQ"
+    data: "${get_field_codetype($a_response)}"
+  assert_code: 200
+Test2:
+  desc: "单行文本正确提交1"
+  parameters:
       pushID: 869760033631713
-    assert_code: 200
-    assert_in_text: 登录成功
+  assert_code: 200

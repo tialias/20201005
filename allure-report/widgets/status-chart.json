@@ -1,0 +1,31 @@
+[ {
+  "uid" : "22232f60b021a4c5",
+  "name" : "单行文本正确提交",
+  "time" : {
+    "start" : 1605690734047,
+    "stop" : 1605690735054,
+    "duration" : 1007
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34e2c7e947e2fef2",
+  "name" : "单行文本白名单",
+  "time" : {
+    "start" : 1605690733253,
+    "stop" : 1605690734043,
+    "duration" : 790
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bfbf5a03539dc6c7",
+  "name" : "单行文本不能和已有数据重复",
+  "time" : {
+    "start" : 1605690731738,
+    "stop" : 1605690733214,
+    "duration" : 1476
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

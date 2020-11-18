@@ -1,0 +1,133 @@
+{
+  "uid" : "be6bd2693404f849",
+  "name" : "单行文本正确提交",
+  "fullName" : "testcases.text_field_test.normal_submit_test.TestCaseNormalSubmit#test_start",
+  "historyId" : "d2361c33db6b3e3713284f36b16a1027",
+  "time" : {
+    "start" : 1605690716232,
+    "stop" : 1605690717322,
+    "duration" : 1090
+  },
+  "description" : "TestCase ID: 52e686f7-3284-412d-ae62-fa5779582b7c",
+  "descriptionHtml" : "<p>TestCase ID: 52e686f7-3284-412d-ae62-fa5779582b7c</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1605690716162,
+      "stop" : 1605690716230,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "TestCase ID: 52e686f7-3284-412d-ae62-fa5779582b7c",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "step: 打开表单",
+      "time" : {
+        "start" : 1605690716329,
+        "stop" : 1605690716811,
+        "duration" : 482
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "step: 提交数据",
+      "time" : {
+        "start" : 1605690716811,
+        "stop" : 1605690717108,
+        "duration" : 297
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "step: 跳转到success",
+      "time" : {
+        "start" : 1605690717109,
+        "stop" : 1605690717321,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "17070be3da9e1024",
+      "name" : "stderr",
+      "source" : "17070be3da9e1024.txt",
+      "type" : "text/plain",
+      "size" : 27526
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases.text_field_test"
+  }, {
+    "name" : "suite",
+    "value" : "normal_submit_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCaseNormalSubmit"
+  }, {
+    "name" : "host",
+    "value" : "tianliangdeMBP2.lan"
+  }, {
+    "name" : "thread",
+    "value" : "20006-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.text_field_test.normal_submit_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "be6bd2693404f849.json",
+  "parameterValues" : [ ]
+}

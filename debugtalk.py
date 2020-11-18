@@ -4,6 +4,7 @@ import re
 import time, uuid
 
 import jmespath
+import yaml
 from faker import Faker
 from httprunner import __version__
 
@@ -30,6 +31,12 @@ def get_random_name():
     fake = Faker("zh_CN")
     name = fake.name()
     return name
+
+
+def rear_yaml():
+    f = open(r"../data/data.yaml")
+    y = yaml.safe_load(f)
+    print(y)
 
 
 def get_field_codetype(html_text):
@@ -80,3 +87,6 @@ def mobile_field_data():
 
 def email_field_data():
     return fake.email()
+
+
+print(rear_yaml())
