@@ -1,8 +1,8 @@
 import json
 import random
 import re
-import time, uuid
-
+import time
+import uuid
 import jmespath
 import yaml
 from faker import Faker
@@ -33,10 +33,17 @@ def get_random_name():
     return name
 
 
-def rear_yaml():
+def read_yaml(testcase_name):
     f = open(r"../data/data.yaml")
-    y = yaml.safe_load(f)
-    print(y)
+    case_data = yaml.safe_load(f)[testcase_name]
+    format_case_data = []
+    for i in case_data:
+        format_case_data.append(i["desc"])
+        format_case_data.append(i["form_token"])
+        format_case_data.append(i["form_data"])
+        format_case_data.append(i["assert_code"])
+
+    return case_data
 
 
 def get_field_codetype(html_text):
@@ -89,4 +96,4 @@ def email_field_data():
     return fake.email()
 
 
-print(rear_yaml())
+print(read_yaml("normal_submit_test"))
