@@ -10,19 +10,14 @@ class TestCaseNormalSubmit(HttpRunner):
         "param",
         Parameters(
             {
-                "desc-form_token-form_data-assert_code": [(),()],
-                # "${read_yaml(%s)}"
-                # % "normal_submit_test"
-                # "form_token": "${read_yaml('normal_submit_test')}%s" % ["form_token"],
-                # "form_data": "${read_yaml('normal_submit_test')}%s" % ["form_data"],
-                # "assert_code": "${read_yaml('normal_submit_test')}%s" % ["assert_code"],
+                "desc-form_token-form_data-assert_code": "${read_yaml(normal_submit_test)}",
             }
         ),
     )
     def test_start(self, param):
         super().test_start(param)
 
-    config = Config("单行文本正确提交").verify(False).export("a_response")
+    config = Config("$desc").verify(False).export("a_response")
 
     teststeps = [
         Step(
@@ -136,8 +131,8 @@ class TestCaseNormalSubmit(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "yNxDGQ",
-                            "entryAttributes": "${get_field_codetype($a_response)}",
+                            "formId": "$form_token",
+                            "entryAttributes": "$form_data",
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
@@ -159,7 +154,7 @@ class TestCaseNormalSubmit(HttpRunner):
                 }
             )
             .validate()
-            .assert_equal("status_code", 200)
+            .assert_equal("status_code", "$assert_code")
         ),
         Step(
             RunRequest("跳转到success")

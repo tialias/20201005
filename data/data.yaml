@@ -1,14 +1,14 @@
 ---
 normal_submit_test:
   -
-    desc: "单行文本正确提交"
+    desc: "单行文本正确提交1"
     form_token: "yNxDGQ"
-    form_data: "${get_field_codetype($a_response)}"
+    form_data: {'field_2':'zhangsan123'}
     assert_code: 200
   -
-    desc: "单行文本正确提交"
+    desc: "单行文本正确提交2"
     form_token: "yNxDGQ"
-    form_data: "${get_field_codetype($a_response)}"
+    form_data: {'field_2':'zangsan 123'}
     assert_code: 200
 Test2:
   desc: "单行文本正确提交1"

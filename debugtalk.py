@@ -34,16 +34,13 @@ def get_random_name():
 
 
 def read_yaml(testcase_name):
-    f = open(r"../data/data.yaml")
+    f = open(r"../../data/data.yaml")
     case_data = yaml.safe_load(f)[testcase_name]
     format_case_data = []
     for i in case_data:
-        format_case_data.append(i["desc"])
-        format_case_data.append(i["form_token"])
-        format_case_data.append(i["form_data"])
-        format_case_data.append(i["assert_code"])
+        format_case_data.append(tuple(i.values()))
 
-    return case_data
+    return format_case_data
 
 
 def get_field_codetype(html_text):
