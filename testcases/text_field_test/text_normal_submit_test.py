@@ -10,7 +10,7 @@ class TestCaseNormalSubmit(HttpRunner):
         "param",
         Parameters(
             {
-                "desc-form_token-form_data-assert_code": "${read_yaml(normal_submit_test)}",
+                "desc-form_token-form_data-assert_code-assert_message": "${read_yaml(text_normal_submit_test)}",
             }
         ),
     )

@@ -1,17 +1,41 @@
 ---
-normal_submit_test:
+text_normal_submit_test:
   -
     desc: "单行文本正确提交1"
     form_token: "yNxDGQ"
     form_data: {'field_2':'zhangsan123'}
     assert_code: 200
+    assert_message: ""
   -
     desc: "单行文本正确提交2"
     form_token: "yNxDGQ"
     form_data: {'field_2':'zangsan 123'}
     assert_code: 200
-Test2:
-  desc: "单行文本正确提交1"
-  parameters:
-      pushID: 869760033631713
-  assert_code: 200
+    assert_message: ""
+text_repeat_submit_test:
+  -
+    desc: "单行文本重复提交"
+    form_token: "FvUXs9"
+    form_data: null
+    response_code_path: "body.data.createPublishedFormEntry.errors[0].code"
+    response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
+    assert_code: 400
+    assert_message: "姓名已被占用"
+
+text_whitelist_test:
+  -
+    desc: "单行文本白名单"
+    form_token: "XE0hhL"
+    form_data: {'field_1':'张三'}
+    response_code_path: "status_code"
+    response_message_path: ""
+    assert_code: 200
+    assert_message: ""
+  -
+    desc: "单行文本白名单"
+    form_token: "XE0hhL"
+    form_data: {'field_1':'王五'}
+    response_code_path: "body.data.createPublishedFormEntry.errors[0].code"
+    response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
+    assert_code: 400
+    assert_message: "「王五」不能提交"

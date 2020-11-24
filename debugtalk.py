@@ -34,7 +34,7 @@ def get_random_name():
 
 
 def read_yaml(testcase_name):
-    f = open(r"../../data/data.yaml")
+    f = open(r"./data/data.yaml")
     case_data = yaml.safe_load(f)[testcase_name]
     format_case_data = []
     for i in case_data:
@@ -91,6 +91,3 @@ def mobile_field_data():
 
 def email_field_data():
     return fake.email()
-
-
-print(read_yaml("normal_submit_test"))

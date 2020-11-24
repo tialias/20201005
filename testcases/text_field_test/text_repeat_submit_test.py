@@ -10,12 +10,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
         "param",
         Parameters(
             {
-                "field_1-re_field_1": [("zhang4", "zhang4"), ("li4", "li4")],
-                # "${read_yaml(%s)}"
-                # % "normal_submit_test"
-                # "form_token": "${read_yaml('normal_submit_test')}%s" % ["form_token"],
-                # "form_data": "${read_yaml('normal_submit_test')}%s" % ["form_data"],
-                # "assert_code": "${read_yaml('normal_submit_test')}%s" % ["assert_code"],
+                "desc-form_token-form_data-response_code_path-response_message_path-assert_code-assert_message": "${read_yaml(text_repeat_submit_test)}",
             }
         ),
     )
@@ -23,8 +18,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
         super().test_start(param)
 
     config = (
-        Config("单行文本不能和已有数据重复").verify(False)
-        # .variables(**{"field_1_name": "${get_random_name()}"})
+        Config("$desc").verify(False).variables(**{"field_1": "${get_random_name()}"})
     )
     teststeps = [
         Step(
@@ -210,7 +204,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "variables": {
                         "input": {
                             "formId": "FvUXs9",
-                            "entryAttributes": {"field_1": "$re_field_1"},
+                            "entryAttributes": {"field_1": "$field_1"},
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
@@ -232,10 +226,8 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                 }
             )
             .validate()
-            .assert_equal("body.data.createPublishedFormEntry.errors[0].code", 400)
-            .assert_equal(
-                "body.data.createPublishedFormEntry.errors[0].message", "姓名已被占用"
-            )
+            .assert_equal("$response_code_path", "$assert_code")
+            .assert_equal("$response_message_path", "$assert_message")
         ),
     ]
 
