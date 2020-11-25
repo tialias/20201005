@@ -1,0 +1,50 @@
+2020-11-25 18:10:46.223 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: f4cc82d3-d9c3-4392-9c07-1401df421a6b
+2020-11-25 18:10:46.223 | INFO     | httprunner.runner:__run_step:292 - run step begin: 提交表单 >>>>>>
+2020-11-25 18:10:46.230 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'connection'
+2020-11-25 18:10:46.230 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'connection'
+2020-11-25 18:10:46.231 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://mo.jinshuju.nest/graphql/f/cBPZWA
+headers  : {
+    "Content-Length": "0"
+}
+cookies  : {}
+body     : None
+
+2020-11-25 18:10:46.231 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 0
+headers  : {}
+cookies  : {}
+encoding : None
+content_type : 
+body     : 
+
+2020-11-25 18:10:46.231 | ERROR    | httprunner.client:request:215 - HTTPSConnectionPool(host='mo.jinshuju.nest', port=443): Max retries exceeded with url: /graphql/f/cBPZWA (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x108058790>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2020-11-25 18:10:46.231 | ERROR    | httprunner.response:validate:263 - assert status_code equal 200(int)	==> fail
+check_item: status_code
+check_value: 0(int)
+assert_method: equal
+expect_value: 200(int)
+2020-11-25 18:10:46.232 | INFO     | httprunner.response:validate:246 - assert  equal (str)	==> pass
+2020-11-25 18:10:46.232 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://mo.jinshuju.nest/graphql/f/cBPZWA
+method: POST
+headers: {'content-length': '465', 'accept': '*/*', 'x-csrf-token': 'CePKAMn3aZDhj3bAIu9aRPAXKl7INA33Uy71bX6M3RcSdVp8nMeZwRtbV+aysTcb9dTUww6LSuLGpI+gzYBAPA==', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36', 'content-type': 'application/json;charset=UTF-8', 'origin': '', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'https://mo.jinshuju.nest/f/cBPZWA', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8', 'HRUN-Request-ID': 'HRUN-f4cc82d3-d9c3-4392-9c07-1401df421a6b-046224'}
+params: {}
+data: None
+cookies: {'_ga': 'GA1.2.669479930.1597286832', '_smt_uid': '5f4c6fcb.35bf55f7', 'change_theme_btn_clicked_midautumn': '1579600505', 'show_template_for_double_zero_user': 'true', 'first_login': 'true', '_gd_sid_fusion': 'IjVmYWJiNzEyMGJjMmIzNTBhYzJmYTBkMyI%3D--1344321b8116367056924e9578936a3e5095348f', 'jsj_locale': 'zh-CN', 'trial_just_started': 'true', '_gid': 'GA1.2.1735364882.1606096121', 'has_visited_dashboard_in_two_days': 'true', 'start_filling_time_F8zv90': '1606101391', 'start_filling_time_Eyq0Lj': '1606110024', 'Hm_lvt_47cd03e974df6869353431fe4f4d6b2f': '1605256477,1605752202,1605855368,1606110935', 'filled_form_scene': 'form', '_gd_sid': 'IjVmYmI4MjRlNmQ4MDFkOTEwYTVhMDkzMiI%3D--4db76fd7fe46d9baf97e421dccf2cd63e0850a5f', '_gd_sid_uat': 'IjVmYmM2ZjAyZDQ5NmNlMDcyZjJhODZmNiI%3D--a95df1d77c8e038c0aafd5d64798cc118d002c31', '_jinshuju_ut': 'IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3MiI%3D--8f535c3330099d30d8078fe3be96ec08f00eb321', '_gd_sid_mo': 'IjVmYmNhMDM4NWI2NTE2MmE5NGJkMDk0ZiI%3D--a38367568f87bac697fca27c0d2874b4ae67ee86', 'jsj_uid': 'ec5ce3b2-5149-4620-b475-e2a633d5dccf', 'country_code': 'CN', 'start_filling_time_HG8PJn': '1606200311', 'start_filling_time_C0Gxbr': '1606206794', 'start_filling_time_ELty8i': '1606206939', '_caid': 'IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6', 'last_fill_entry_token': 'mvVIC1NJ', 'start_filling_time_XE0hhL': '1606213003', 'mixpanel_event_history': 'form_updated', 'start_filling_time_cBPZWA': '1606214182', 'csrf_token': 'CePKAMn3aZDhj3bAIu9aRPAXKl7INA33Uy71bX6M3RcSdVp8nMeZwRtbV+aysTcb9dTUww6LSuLGpI+gzYBAPA==', 'Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f': '1606214181', '_gat_gtag_UA_48208031_13': '1', '_gd_session': 'QWxsMDlZczYrdXVHMmkzSllNZEZaaysyTURHb2pib3huREI2eHhJN0QyTlJ1WHpROVZneDNwMU9KOFEvbmFObXhJZ2ludW5JY2Vld0o2aVdsajVsdUxyTUNVUmhVUGpNaWdNRnBrajd0N1kzNGw5S2kwOFh4d2VINmVVVEVNYTZCNTlmK0l5Y09lY1hCd25zYWZJSFZ3NWFWVGZQdElvOHN6STF2dDBaWXZKUXNHaGVxMi9OUGFGaFBjdFhIZ2s1a2N4bU1COGkzdzkrQm4zTFFmbGF1dWZiNEgzWVVPTzdRMU5XcnBCdHhaMFU3RFppMVQyd0xVaVgxdy9XWGFTYXhPd0s4anZ4QzY0N1N2VHVsZkJvY0gxVS94bTZsN09oTzhqeE1NQURyTGhseDJjZDRIcVBTN0hjWDRaZFBhTFFuM2hqaWR1V2tqYXBKZ0xOWGU1QUtnPT0tLUd4M2tTTm5kc0tpNnJ3V0RvTDZMWVE9PQ%3D%3D--e1f78dc4055fca99fd4c1fa03e2582d5da91fbf7'}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'operationName': 'CreatePublishedFormEntry', 'variables': {'input': {'formId': 'cBPZWA', 'entryAttributes': {'field_1': '张三'}, 'captchaData': None, 'weixinAccessToken': None, 'xFieldWeixinOpenid': None, 'weixinInfo': None, 'prefilledParams': '', 'embedded': False, 'backgroundImage': False, 'formMargin': False, 'hasPreferential': False, 'fillingDuration': 21}}, 'extensions': {'persistedQuery': {'version': 1, 'sha256Hash': '4cd6a9aef2820b2c3215f6ddfa87093869461f76f3f2016738f4307268a7df98'}}}
+
+====== response details ======
+status_code: 0
+headers: {}
+body: ''
+
+2020-11-25 18:10:46.233 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/tianliangliang/PycharmProjects/20201005/logs/f4cc82d3-d9c3-4392-9c07-1401df421a6b.run.log

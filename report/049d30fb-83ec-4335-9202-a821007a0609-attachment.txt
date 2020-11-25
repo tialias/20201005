@@ -1,0 +1,48 @@
+2020-11-25 18:12:24.638 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: c19d4c49-cdf1-4791-a240-2c5b712943fb
+2020-11-25 18:12:24.638 | INFO     | httprunner.runner:__run_step:292 - run step begin: /f/jDRmyn >>>>>>
+2020-11-25 18:12:24.649 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'connection'
+2020-11-25 18:12:24.650 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'connection'
+2020-11-25 18:12:24.650 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://mo.jinshuju.nest/f/OHgnwc
+headers  : {}
+cookies  : {}
+body     : None
+
+2020-11-25 18:12:24.650 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 0
+headers  : {}
+cookies  : {}
+encoding : None
+content_type : 
+body     : 
+
+2020-11-25 18:12:24.650 | ERROR    | httprunner.client:request:215 - HTTPSConnectionPool(host='mo.jinshuju.nest', port=443): Max retries exceeded with url: /f/OHgnwc (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x108ea2d50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2020-11-25 18:12:24.651 | INFO     | httprunner.response:extract:176 - extract mapping: {'a_response': None}
+2020-11-25 18:12:24.651 | ERROR    | httprunner.response:validate:263 - assert status_code equal 200(int)	==> fail
+check_item: status_code
+check_value: 0(int)
+assert_method: equal
+expect_value: 200(int)
+2020-11-25 18:12:24.651 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://mo.jinshuju.nest/f/OHgnwc
+method: GET
+headers: {'cache-control': 'max-age=0', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'zh-CN,zh;q=0.9', 'if-none-match': 'W/"2477d104de7bc5ea8dd45f2112e3065a"', 'HRUN-Request-ID': 'HRUN-c19d4c49-cdf1-4791-a240-2c5b712943fb-144639'}
+params: {}
+data: None
+cookies: {'jsj_uid': 'ad89599c-2a40-42d0-af2b-e092b36f051b', 'start_filling_time_jDRmyn': '1604311832', 'csrf_token': 'WmbUm2AB50DyF0bWgqQjyC7daB6JRfMA1e83rtgWOhVOYQevb0ZSLqcbGCBFjTyeMyY/ChM4BmYGm/VxGId2Pw==', 'Hm_lvt_47cd03e974df6869353431fe4f4d6b2f': '1604311834', 'Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f': '1604311834', '_gd_session': 'azVoblFtR3ZlOGJta2wwWjhUd3NPdTVvT3VyVkUrNE5waU5Qb25ZQmRLdVZqajBNSXR4dnZBS0dGa1VDS3Rna21CSlJMaVZQb3NuRWx0VGNhVWdPVWl6STE1VnNUL3BmTjg0Qm93b0V0cUxXd0Jyc0hYZ1RDckw3eWx5Y0tjUUUxSWE0SkpZbXYwS3VBU1JmakhmUGtnPT0tLTJVbnM3WFlYaERldm5FRWl1SkFqQWc9PQ%3D%3D--7574f0b0a322b96b5aba20556cf421766c71d417', 'filled_form_scene': 'form', '_ga': 'GA1.2.374196750.1604311835', '_gid': 'GA1.2.1293992417.1604311835', '_gat_gtag_UA_48208031_13': '1'}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 0
+headers: {}
+body: ''
+
+2020-11-25 18:12:24.653 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/tianliangliang/PycharmProjects/20201005/logs/c19d4c49-cdf1-4791-a240-2c5b712943fb.run.log
