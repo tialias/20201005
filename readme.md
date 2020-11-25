@@ -15,7 +15,9 @@
 
         pip3 install -r requirements.txt
             
-- 进入项目根目录，运行测试  
+- 进入项目根目录，运行测试
+
+        hrun testcasePath --allure=report
 
 - 生成测试报告  
 
