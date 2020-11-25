@@ -10,19 +10,19 @@ class TestCaseNormalSubmit(HttpRunner):
         "param",
         Parameters(
             {
-                "desc-form_token-form_data-assert_code-assert_message": "${read_yaml(text_normal_submit_test)}",
+                "desc-form_token-form_data-response_code_path-response_message_path-assert_code-assert_message": "${read_yaml(text_banlist_test)}",
             }
         ),
     )
     def test_start(self, param):
         super().test_start(param)
 
-    config = Config("$desc").verify(False).export("a_response")
+    config = Config("$desc").verify(False)
 
     teststeps = [
         Step(
             RunRequest("打开表单")
-            .get("https://mo.jinshuju.net/f/yNxDGQ")
+            .get("${ENV(BASE_URL)}/f/$form_token")
             .with_headers(
                 **{
                     "pragma": "no-cache",
@@ -34,7 +34,7 @@ class TestCaseNormalSubmit(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
                 }
@@ -63,20 +63,19 @@ class TestCaseNormalSubmit(HttpRunner):
                     "_caid": "IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6",
                     "mixpanel_event_history": "form_updated",
                     "last_fill_entry_token": "22QXNuno",
-                    "start_filling_time_yNxDGQ": "1603705773",
+                    "start_filling_time_$form_token": "1603705773",
                     "csrf_token": "tEhH5ma7oLqw5JRt6QBlAqCiM0aQQeN44nXUSpvHIS1aTOsDbckkbAhdI27niVaAogNpmKWTBYPlMZXgtTjJmA==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603705775",
                     "_gd_session": "YWI0aCtEa3U2aG9ocWRReHR6RmFIcUE5cFlucE9XdTBPWGxjcGI5Z05hLy9Bd0tkdmpBWjVPcU9VSEN6M3dXUm02cDUyV3FGanFFM3FTZGJhY1ROWm93cDdLY2lFeHFDVG15bDh3QzBCUEFidkZvQXFiTjAyVWx2ZktEcmpqYlJ6R1lTczNlUXBkNHZoRkhtQ1REZjZRPT0tLUwxT0EwbE1NZnk3cFMvSG1rNWtzdFE9PQ%3D%3D--2400ec31c69ecde61968e2153e52738476655b88",
                 }
             )
             .extract()
-            .with_jmespath("body", "a_response")
             .validate()
             .assert_equal("status_code", 200)
         ),
         Step(
             RunRequest("提交数据")
-            .post("https://mo.jinshuju.net/graphql/f/yNxDGQ")
+            .post("${ENV(BASE_URL)}/graphql/f/$form_token")
             .with_headers(
                 **{
                     "content-length": "464",
@@ -88,11 +87,11 @@ class TestCaseNormalSubmit(HttpRunner):
                     "x-entry-token": "22QXNuno",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "${ENV(BASE_URL)}",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
                 }
@@ -119,7 +118,7 @@ class TestCaseNormalSubmit(HttpRunner):
                     "_caid": "IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6",
                     "mixpanel_event_history": "form_updated",
                     "last_fill_entry_token": "22QXNuno",
-                    "start_filling_time_yNxDGQ": "1603705891",
+                    "start_filling_time_$form_token": "1603705891",
                     "csrf_token": "9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603705893",
                     "_gat_gtag_UA_48208031_13": "1",
@@ -158,7 +157,7 @@ class TestCaseNormalSubmit(HttpRunner):
         ),
         Step(
             RunRequest("跳转到success")
-            .get("https://mo.jinshuju.net/f/yNxDGQ/success")
+            .get("${ENV(BASE_URL)}/f/$form_token/success")
             .with_headers(
                 **{
                     "pragma": "no-cache",
@@ -170,7 +169,7 @@ class TestCaseNormalSubmit(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
                 }

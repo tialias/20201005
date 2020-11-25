@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Nov 18 17:12:14 CST 2020","Wed Nov 18 17:12:15 CST 2020","1007","testcases.text_field_test","normal_submit_test","TestCaseNormalSubmit","","","单行文本正确提交","TestCase ID: 77a3b075-f0a3-4777-9c44-96ece0433112"
-"passed","Wed Nov 18 17:12:13 CST 2020","Wed Nov 18 17:12:14 CST 2020","790","testcases.text_field_test","text_whitelist_test","TestCaseTextWhitelist","","","单行文本白名单","TestCase ID: bca2e25d-c04b-4584-b943-bb7d508b9e3d"
-"broken","Wed Nov 18 17:12:11 CST 2020","Wed Nov 18 17:12:13 CST 2020","1476","testcases.text_field_test","text_repeat_submit_test","TestCaseTextRepeatSubmit","","","单行文本不能和已有数据重复","TestCase ID: 38769b5a-aecd-406c-b459-8350138c83c5"

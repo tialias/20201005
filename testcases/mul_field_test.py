@@ -11,7 +11,7 @@ class TestCaseMulField(HttpRunner):
     teststeps = [
         Step(
             RunRequest("/f/jDRmyn")
-            .get("https://mo.jinshuju.net/f/OHgnwc")
+            .get("${ENV(BASE_URL)}/f/OHgnwc")
             .with_headers(
                 **{
                     "cache-control": "max-age=0",
@@ -48,7 +48,7 @@ class TestCaseMulField(HttpRunner):
         ),
         Step(
             RunRequest("/graphql/f/jDRmyn")
-            .post("https://mo.jinshuju.net/graphql/f/OHgnwc")
+            .post("${ENV(BASE_URL)}/graphql/f/OHgnwc")
             .with_headers(
                 **{
                     "content-length": "581",
@@ -56,11 +56,11 @@ class TestCaseMulField(HttpRunner):
                     "x-csrf-token": "/acWuMPVyrfFTQ2LBJ0rlFl7fiLrhypMcg7ztLrU4n/poMWMzJJ/2ZBBU33DtDTCRIApNnH63yqhejFrekWuVQ==",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "${ENV(BASE_URL)}",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/jDRmyn",
+                    "referer": "${ENV(BASE_URL)}/f/jDRmyn",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -111,7 +111,7 @@ class TestCaseMulField(HttpRunner):
         ),
         Step(
             RunRequest("/f/OHgnwc/success")
-            .get("https://mo.jinshuju.net/f/OHgnwc/success")
+            .get("${ENV(BASE_URL)}/f/OHgnwc/success")
             .with_params(
                 **{
                     "e_token": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjpbIlNNM0s5d1MzIiwiNWY5ZmQwMjg1YjY1MTY0NTRjNzA3NDM3Il0sImV4cCI6MTYwNDM5ODI2MH0.vVHJ3Mz4rpVWNGouEBUTrPMjzZjvvjdUq8gcO4ekEaU"
@@ -126,7 +126,7 @@ class TestCaseMulField(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/jDRmyn",
+                    "referer": "${ENV(BASE_URL)}/f/jDRmyn",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }

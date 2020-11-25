@@ -16,11 +16,20 @@ text_repeat_submit_test:
   -
     desc: "单行文本重复提交"
     form_token: "FvUXs9"
-    form_data: null
+    form_data: {'field_1':'张三'}
     response_code_path: "body.data.createPublishedFormEntry.errors[0].code"
     response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
     assert_code: 400
     assert_message: "姓名已被占用"
+  -
+    desc: "单行文本重复提交"
+    form_token: "FvUXs9"
+    form_data: {'field_1':'李四'}
+    response_code_path: "status_code"
+    response_message_path: ""
+    assert_code: 200
+    assert_message: ""
+
 
 text_whitelist_test:
   -
@@ -39,3 +48,19 @@ text_whitelist_test:
     response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
     assert_code: 400
     assert_message: "「王五」不能提交"
+
+text_banlist_test:
+  - desc: "单行文本黑名单"
+    form_token: "cBPZWA"
+    form_data: {'field_1':'张三'}
+    response_code_path: "status_code"
+    response_message_path: ""
+    assert_code: 200
+    assert_message: ""
+  - desc: "单行文本黑"
+    form_token: "cBPZWA"
+    form_data: {'field_1':'李四'}
+    response_code_path: "body.data.createPublishedFormEntry.errors[0].code"
+    response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
+    assert_code: 400
+    assert_message: "「李四」不能提交"

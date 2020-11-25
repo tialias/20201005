@@ -21,8 +21,8 @@ class TestCaseTextWhitelist(HttpRunner):
 
     teststeps = [
         Step(
-            RunRequest("/f/XE0hhL")
-            .get("https://mo.jinshuju.net/f/XE0hhL")
+            RunRequest("/f/$form_token")
+            .get("${ENV(BASE_URL)}/f/$form_token")
             .with_headers(
                 **{
                     "cache-control": "max-age=0",
@@ -41,7 +41,7 @@ class TestCaseTextWhitelist(HttpRunner):
             .with_cookies(
                 **{
                     "jsj_uid": "d451b406-246d-4051-93e4-3198fced0991",
-                    "start_filling_time_XE0hhL": "1605600585",
+                    "start_filling_time_$form_token": "1605600585",
                     "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1605600586",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1605600586",
                     "_ga": "GA1.2.83749953.1605600586",
@@ -55,8 +55,8 @@ class TestCaseTextWhitelist(HttpRunner):
             .assert_equal("status_code", 200)
         ),
         Step(
-            RunRequest("/graphql/f/XE0hhL")
-            .post("https://mo.jinshuju.net/graphql/f/XE0hhL")
+            RunRequest("/graphql/f/$form_token")
+            .post("${ENV(BASE_URL)}/graphql/f/$form_token")
             .with_headers(
                 **{
                     "content-length": "464",
@@ -64,11 +64,11 @@ class TestCaseTextWhitelist(HttpRunner):
                     "x-csrf-token": "GGjMRbPEbsqjuWeiOY+JqqLRXCH/mgl1fgimM6+FjObJ0rekmvDH3ZBvI1y9sLEtuTyTN/lFRHf7PadD9D635Q==",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "${ENV(BASE_URL)}",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/XE0hhL",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -80,7 +80,7 @@ class TestCaseTextWhitelist(HttpRunner):
                     "_ga": "GA1.2.83749953.1605600586",
                     "_gid": "GA1.2.508759516.1605600586",
                     "filled_form_scene": "form",
-                    "start_filling_time_XE0hhL": "1605600695",
+                    "start_filling_time_$form_token": "1605600695",
                     "csrf_token": "GGjMRbPEbsqjuWeiOY+JqqLRXCH/mgl1fgimM6+FjObJ0rekmvDH3ZBvI1y9sLEtuTyTN/lFRHf7PadD9D635Q==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1605600696",
                     "_gat_gtag_UA_48208031_13": "1",
@@ -92,7 +92,7 @@ class TestCaseTextWhitelist(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "XE0hhL",
+                            "formId": "$form_token",
                             "entryAttributes": "$form_data",
                             "captchaData": None,
                             "weixinAccessToken": None,
@@ -119,8 +119,8 @@ class TestCaseTextWhitelist(HttpRunner):
             .assert_equal("$response_message_path", "$assert_message")
         ),
         Step(
-            RunRequest("/f/XE0hhL/success")
-            .get("https://mo.jinshuju.net/f/XE0hhL/success")
+            RunRequest("/f/$form_token/success")
+            .get("${ENV(BASE_URL)}/f/$form_token/success")
             .with_params(
                 **{
                     "e_token": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjpbIktOcjdXaTV1IiwiNWY5ZmMwNjM1YjY1MTY0NTUwNzA3M2RmIl0sImV4cCI6MTYwNTY4NzEwNX0.xMfHrpV9evn0VMaB-BntWcPr6LbgVOYxtok6zbpfDhk"
@@ -135,7 +135,7 @@ class TestCaseTextWhitelist(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/XE0hhL",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }

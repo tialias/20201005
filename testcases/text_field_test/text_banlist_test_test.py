@@ -9,18 +9,19 @@ class TestCaseTextBanlistTest(HttpRunner):
         "param",
         Parameters(
             {
-                "desc-form_token-form_data-assert_code-assert_message": "${read_yaml(text_normal_submit_test)}",
+                "desc-form_token-form_data-response_code_path-response_message_path-assert_code-assert_message": "${read_yaml(text_banlist_test)}",
             }
         ),
     )
     def test_start(self, param):
         super().test_start(param)
-    config = Config("testcase description").verify(False)
+
+    config = Config("testcase description").verify(False).base_url("${ENV(BASE_URL)}")
 
     teststeps = [
         Step(
-            RunRequest("/graphql/f/cBPZWA")
-            .post("https://mo.jinshuju.net/graphql/f/cBPZWA")
+            RunRequest("提交表单")
+            .post("${ENV(BASE_URL)}/graphql/f/$form_token")
             .with_headers(
                 **{
                     "content-length": "465",
@@ -28,11 +29,11 @@ class TestCaseTextBanlistTest(HttpRunner):
                     "x-csrf-token": "CePKAMn3aZDhj3bAIu9aRPAXKl7INA33Uy71bX6M3RcSdVp8nMeZwRtbV+aysTcb9dTUww6LSuLGpI+gzYBAPA==",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/cBPZWA",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
                 }
@@ -66,7 +67,7 @@ class TestCaseTextBanlistTest(HttpRunner):
                     "last_fill_entry_token": "mvVIC1NJ",
                     "start_filling_time_XE0hhL": "1606213003",
                     "mixpanel_event_history": "form_updated",
-                    "start_filling_time_cBPZWA": "1606214182",
+                    "start_filling_time_$form_token": "1606214182",
                     "csrf_token": "CePKAMn3aZDhj3bAIu9aRPAXKl7INA33Uy71bX6M3RcSdVp8nMeZwRtbV+aysTcb9dTUww6LSuLGpI+gzYBAPA==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1606214181",
                     "_gat_gtag_UA_48208031_13": "1",
@@ -78,8 +79,8 @@ class TestCaseTextBanlistTest(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "cBPZWA",
-                            "entryAttributes": {"field_1": "张三"},
+                            "formId": "$form_token",
+                            "entryAttributes": "$form_data",
                             "captchaData": None,
                             "weixinAccessToken": None,
                             "xFieldWeixinOpenid": None,
@@ -101,11 +102,12 @@ class TestCaseTextBanlistTest(HttpRunner):
                 }
             )
             .validate()
-            .assert_equal("status_code", 200)
+            .assert_equal("$response_code_path", "$assert_code")
+            .assert_equal("$response_message_path", "$assert_message")
         ),
         Step(
-            RunRequest("/f/cBPZWA/success")
-            .get("https://mo.jinshuju.net/f/cBPZWA/success")
+            RunRequest("进入success页面")
+            .get("${ENV(BASE_URL)}/f/$form_token/success")
             .with_headers(
                 **{
                     "upgrade-insecure-requests": "1",
@@ -115,7 +117,7 @@ class TestCaseTextBanlistTest(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/cBPZWA",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
                 }

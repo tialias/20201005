@@ -23,7 +23,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
     teststeps = [
         Step(
             RunRequest("打开表单")
-            .get("https://mo.jinshuju.net/f/FvUXs9")
+            .get("${ENV(BASE_URL)}/f/$form_token")
             .with_headers(
                 **{
                     "cache-control": "max-age=0",
@@ -42,7 +42,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
             .with_cookies(
                 **{
                     "jsj_uid": "91864945-fa8e-43da-a3b4-7d27a3382d66",
-                    "start_filling_time_FvUXs9": "1603706485",
+                    "start_filling_time_$form_token": "1603706485",
                     "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1603706487",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603706487",
                     "_ga": "GA1.2.1959073059.1603706487",
@@ -57,7 +57,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
         ),
         Step(
             RunRequest("第一次提交")
-            .post("https://mo.jinshuju.net/graphql/f/FvUXs9")
+            .post("${ENV(BASE_URL)}/graphql/f/$form_token")
             .with_headers(
                 **{
                     "content-length": "464",
@@ -65,11 +65,11 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "x-csrf-token": "L04/HeAwNAUIYmvT9P5r4QaCexxeTRaU8UmnYIF60naawNx4ou0tLoY+LpFicLp9jqQasgSDJpJ/JqSmGIAAag==",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "${ENV(BASE_URL)}",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/FvUXs9",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -81,7 +81,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "_ga": "GA1.2.1959073059.1603706487",
                     "_gid": "GA1.2.2099179606.1603706487",
                     "filled_form_scene": "form",
-                    "start_filling_time_FvUXs9": "1603706555",
+                    "start_filling_time_$form_token": "1603706555",
                     "csrf_token": "L04/HeAwNAUIYmvT9P5r4QaCexxeTRaU8UmnYIF60naawNx4ou0tLoY+LpFicLp9jqQasgSDJpJ/JqSmGIAAag==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603706556",
                     "_gat_gtag_UA_48208031_13": "1",
@@ -93,7 +93,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "FvUXs9",
+                            "formId": "$form_token",
                             "entryAttributes": {"field_1": "$field_1"},
                             "captchaData": None,
                             "weixinAccessToken": None,
@@ -121,7 +121,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
         ),
         Step(
             RunRequest("提交成功页面")
-            .get("https://mo.jinshuju.net/f/FvUXs9/success")
+            .get("${ENV(BASE_URL)}/f/$form_token/success")
             .with_params(
                 **{
                     "e_token": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjpbIlRvaTZBYk1uIiwiNWY5NjllNTM1YjY1MTYyNmJlOGJiZjQyIl0sImV4cCI6MTYwMzc5Mjk2MH0.LhVj7eM2ceL_wnH4TaUnnj00yFkIPE69Cu0XVIbg51M"
@@ -136,7 +136,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "sec-fetch-mode": "navigate",
                     "sec-fetch-user": "?1",
                     "sec-fetch-dest": "document",
-                    "referer": "https://mo.jinshuju.net/f/FvUXs9",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -163,7 +163,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
         ),
         Step(
             RunRequest("第二次提交")
-            .post("https://mo.jinshuju.net/graphql/f/FvUXs9")
+            .post("${ENV(BASE_URL)}/graphql/f/$form_token")
             .with_headers(
                 **{
                     "content-length": "464",
@@ -173,11 +173,11 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "x-entry-token": "Toi6AbMn",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
                     "content-type": "application/json;charset=UTF-8",
-                    "origin": "https://mo.jinshuju.net",
+                    "origin": "${ENV(BASE_URL)}",
                     "sec-fetch-site": "same-origin",
                     "sec-fetch-mode": "cors",
                     "sec-fetch-dest": "empty",
-                    "referer": "https://mo.jinshuju.net/f/FvUXs9",
+                    "referer": "${ENV(BASE_URL)}/f/$form_token",
                     "accept-encoding": "gzip, deflate, br",
                     "accept-language": "zh-CN,zh;q=0.9",
                 }
@@ -191,8 +191,8 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "filled_form_scene": "form",
                     "_gat_gtag_UA_48208031_13": "1",
                     "last_fill_entry_token": "Toi6AbMn",
-                    "referer_url": "https%3A%2F%2Fmo.jinshuju.net%2Ff%2FFvUXs9",
-                    "start_filling_time_FvUXs9": "1603706564",
+                    "referer_url": "https%3A%2F%2Fmo.jinshuju.net%2Ff%2F$form_token",
+                    "start_filling_time_$form_token": "1603706564",
                     "csrf_token": "7yDZv2fCI7roz5Wu0CSEyMotnsrwmfxaivi1xAToB5xarjraJR86kWaT0OxGqlVUQgv/ZKpXzFwEl7YCnRLVgA==",
                     "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603706565",
                     "_gd_session": "SER1dS9GWnBOWDVMdjdnOU5DSy9oK0NSaTZzVVFOeFZ0SXVFRThUemNjRE9Qc2lnRDBSb0dJc3hWTkcxTEtrS3U1ZnRZekQ2TFp0M0tPa0w4QUZBN05ISURURXI1VisyWUpWaER5OWNPYnBCK2FnQU8zQnB6U3o4ZEk4cmNLRmQ5SHBaRllsTzJ0N2dSYm5KSEtER253PT0tLU1HR1FNcGZQTTFLVnNZQnhGWjZ2d1E9PQ%3D%3D--27310416dc85efdf0a75966a2ba8f91408f4632f",
@@ -203,7 +203,7 @@ class TestCaseTextRepeatSubmit(HttpRunner):
                     "operationName": "CreatePublishedFormEntry",
                     "variables": {
                         "input": {
-                            "formId": "FvUXs9",
+                            "formId": "$form_token",
                             "entryAttributes": {"field_1": "$field_1"},
                             "captchaData": None,
                             "weixinAccessToken": None,
