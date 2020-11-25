@@ -17,7 +17,7 @@
             
 - 进入项目根目录，运行测试
 
-        hrun testcasePath --allure=report
+        hrun testcases --allure=report
 
 - 生成测试报告  
 
