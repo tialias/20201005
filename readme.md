@@ -1,6 +1,10 @@
 ### 接口自动化
+#### 测试框架选用
 
-#### 项目启动
+-  选用httprunner框架，项目地址:https://github.com/httprunner/httprunner
+-  基于Python，Pytest集成的接口测试框架，可使用yaml数据驱动，结合allure生成测试报告
+
+#### 项目启动，在本地运行脚本  
 
 -  拉取项目到本地  
     
