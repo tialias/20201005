@@ -10,7 +10,7 @@ class TestCaseNormalSubmit(HttpRunner):
         "param",
         Parameters(
             {
-                "desc-form_token-form_data-response_code_path-response_message_path-assert_code-assert_message": "${read_yaml(text_banlist_test)}",
+                "desc-form_token-form_data-response_code_path-response_message_path-assert_code-assert_message": "${read_yaml(text_normal_submit_test)}",
             }
         ),
     )

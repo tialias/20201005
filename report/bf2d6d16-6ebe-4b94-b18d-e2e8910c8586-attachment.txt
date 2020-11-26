@@ -1,0 +1,325 @@
+2020-11-25 18:27:50.004 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 单行文本正确提交2, TestCase ID: c143d90a-312d-49a0-bc3f-5b3b99a63f4e
+2020-11-25 18:27:50.005 | INFO     | httprunner.runner:__run_step:292 - run step begin: 打开表单 >>>>>>
+2020-11-25 18:27:50.342 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.50.184, Port: 56784
+2020-11-25 18:27:50.342 | DEBUG    | httprunner.client:request:194 - server IP: 161.189.30.223, Port: 443
+2020-11-25 18:27:50.343 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://mo.jinshuju.net/f/yNxDGQ
+headers  : {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Connection": "keep-alive",
+    "pragma": "no-cache",
+    "cache-control": "no-cache",
+    "upgrade-insecure-requests": "1",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-user": "?1",
+    "sec-fetch-dest": "document",
+    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "HRUN-Request-ID": "HRUN-c143d90a-312d-49a0-bc3f-5b3b99a63f4e-070005",
+    "Cookie": "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f=1603705775; Hm_lvt_47cd03e974df6869353431fe4f4d6b2f=1602214492,1602224981,1602225263,1603435846; _caid=IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6; _ga=GA1.2.669479930.1597286832; _gd_session=YWI0aCtEa3U2aG9ocWRReHR6RmFIcUE5cFlucE9XdTBPWGxjcGI5Z05hLy9Bd0tkdmpBWjVPcU9VSEN6M3dXUm02cDUyV3FGanFFM3FTZGJhY1ROWm93cDdLY2lFeHFDVG15bDh3QzBCUEFidkZvQXFiTjAyVWx2ZktEcmpqYlJ6R1lTczNlUXBkNHZoRkhtQ1REZjZRPT0tLUwxT0EwbE1NZnk3cFMvSG1rNWtzdFE9PQ%3D%3D--2400ec31c69ecde61968e2153e52738476655b88; _gd_sid=IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43; _gd_sid_fusion=IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61; _gd_sid_mo=IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7; _gd_sid_staging=IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0; _gd_sid_uat=IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843; _gd_sid_usd=IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be; _gid=GA1.2.1051440085.1603676790; _jinshuju_ut=IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611; _smt_uid=5f4c6fcb.35bf55f7; change_theme_btn_clicked_midautumn=1579600505; country_code=CN; csrf_token=tEhH5ma7oLqw5JRt6QBlAqCiM0aQQeN44nXUSpvHIS1aTOsDbckkbAhdI27niVaAogNpmKWTBYPlMZXgtTjJmA==; entry_token=22QXNuno; filled_form_scene=form; gd_ssf=MTYwMzcwNTcxNg%3D%3D--64adbf3dd471a46788cb64107bf79dd727a1def2; has_visited_dashboard_in_two_days=true; jsj_locale=zh-CN; jsj_uid=ec5ce3b2-5149-4620-b475-e2a633d5dccf; last_fill_entry_token=22QXNuno; mixpanel_event_history=form_updated; start_filling_time_yNxDGQ=1603705773"
+}
+cookies  : {
+    "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603705775",
+    "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1602214492,1602224981,1602225263,1603435846",
+    "_caid": "IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6",
+    "_ga": "GA1.2.669479930.1597286832",
+    "_gd_session": "YWI0aCtEa3U2aG9ocWRReHR6RmFIcUE5cFlucE9XdTBPWGxjcGI5Z05hLy9Bd0tkdmpBWjVPcU9VSEN6M3dXUm02cDUyV3FGanFFM3FTZGJhY1ROWm93cDdLY2lFeHFDVG15bDh3QzBCUEFidkZvQXFiTjAyVWx2ZktEcmpqYlJ6R1lTczNlUXBkNHZoRkhtQ1REZjZRPT0tLUwxT0EwbE1NZnk3cFMvSG1rNWtzdFE9PQ%3D%3D--2400ec31c69ecde61968e2153e52738476655b88",
+    "_gd_sid": "IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43",
+    "_gd_sid_fusion": "IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61",
+    "_gd_sid_mo": "IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7",
+    "_gd_sid_staging": "IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0",
+    "_gd_sid_uat": "IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843",
+    "_gd_sid_usd": "IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be",
+    "_gid": "GA1.2.1051440085.1603676790",
+    "_jinshuju_ut": "IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611",
+    "_smt_uid": "5f4c6fcb.35bf55f7",
+    "change_theme_btn_clicked_midautumn": "1579600505",
+    "country_code": "CN",
+    "csrf_token": "tEhH5ma7oLqw5JRt6QBlAqCiM0aQQeN44nXUSpvHIS1aTOsDbckkbAhdI27niVaAogNpmKWTBYPlMZXgtTjJmA==",
+    "entry_token": "22QXNuno",
+    "filled_form_scene": "form",
+    "gd_ssf": "MTYwMzcwNTcxNg%3D%3D--64adbf3dd471a46788cb64107bf79dd727a1def2",
+    "has_visited_dashboard_in_two_days": "true",
+    "jsj_locale": "zh-CN",
+    "jsj_uid": "ec5ce3b2-5149-4620-b475-e2a633d5dccf",
+    "last_fill_entry_token": "22QXNuno",
+    "mixpanel_event_history": "form_updated",
+    "start_filling_time_yNxDGQ": "1603705773"
+}
+body     : None
+
+2020-11-25 18:27:50.365 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Wed, 25 Nov 2020 10:27:50 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "nginx/1.12.2",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff",
+    "X-Download-Options": "noopen",
+    "X-Permitted-Cross-Domain-Policies": "none",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "x_render": "csrWithCache",
+    "ETag": "W/\"846f9e7356434fbf70a7cfcf35f5fda3\"",
+    "Cache-Control": "max-age=0, private, must-revalidate",
+    "Set-Cookie": "referer_url=https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ; path=/, start_filling_time_yNxDGQ=1606300070; path=/; expires=Fri, 27 Nov 2020 10:27:50 GMT, _gd_session=VjcxdTJITzgrNFZaVHd3U3k5WCtnUEE1bXpHd05jQmNaTmNWK0UyWE56QjJCRHU1SWdEV29rdWNXZGVyQytETlZ2ZVQ4WWJrNFhmRC9sMmVmZCthb3dlY1ptc3RQUjl1bzg5ZjUzRDJSZUxLekZqY0NNVUx5Sy9sRE9jVG9DbW81cGU5QTc4U3lFYVJ5cTZCdUk4dnZRPT0tLUZXVWhUbGZkYldFYkpOYU5qTDh6M1E9PQ%3D%3D--e2fbc9f772ae58364905d367701034a614dfb6fa; path=/; HttpOnly",
+    "X-Request-Id": "090ac079-de30-4e2c-b4a3-601afa6369d8",
+    "X-Runtime": "0.162027",
+    "Vary": "Origin",
+    "Strict-Transport-Security": "max-age=60; includeSubdomains"
+}
+cookies  : {
+    "_gd_session": "VjcxdTJITzgrNFZaVHd3U3k5WCtnUEE1bXpHd05jQmNaTmNWK0UyWE56QjJCRHU1SWdEV29rdWNXZGVyQytETlZ2ZVQ4WWJrNFhmRC9sMmVmZCthb3dlY1ptc3RQUjl1bzg5ZjUzRDJSZUxLekZqY0NNVUx5Sy9sRE9jVG9DbW81cGU5QTc4U3lFYVJ5cTZCdUk4dnZRPT0tLUZXVWhUbGZkYldFYkpOYU5qTDh6M1E9PQ%3D%3D--e2fbc9f772ae58364905d367701034a614dfb6fa",
+    "referer_url": "https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ",
+    "start_filling_time_yNxDGQ": "1606300070"
+}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : <!DOCTYPE html>
+<html data-embedded="" lang="zh-CN" data-from-china="true">
+<head>
+  <meta charset="utf-8">
+  <title>单行文本正常提交</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9036a76073","applicationID":"233718273","transactionName":"JVwKFRNZVVtTF0kzQARfDRIJU11xWRcLEHYJXRATDlpVUkRKFQtaER0HEhNhUENeJgcAXQM=","queueTime":1,"applicationTime":162,"agent":""}</script>
+<scri ... OMITTED 28028 CHARACTORS ...
+
+2020-11-25 18:27:50.365 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 336.52 ms, response_length: 0 bytes
+2020-11-25 18:27:50.366 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-11-25 18:27:50.366 | INFO     | httprunner.runner:__run_step:304 - run step end: 打开表单 <<<<<<
+
+2020-11-25 18:27:50.366 | INFO     | httprunner.runner:__run_step:292 - run step begin: 提交数据 >>>>>>
+2020-11-25 18:27:50.638 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.50.184, Port: 56784
+2020-11-25 18:27:50.638 | DEBUG    | httprunner.client:request:194 - server IP: 161.189.30.223, Port: 443
+2020-11-25 18:27:50.639 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://mo.jinshuju.net/graphql/f/yNxDGQ
+headers  : {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "503",
+    "pragma": "no-cache",
+    "cache-control": "no-cache",
+    "x-gd-ssf": "MTYwMzcwNTcxNg==--64adbf3dd471a46788cb64107bf79dd727a1def2",
+    "x-csrf-token": "9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==",
+    "x-entry-token": "22QXNuno",
+    "content-type": "application/json;charset=UTF-8",
+    "origin": "https://mo.jinshuju.net",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "HRUN-Request-ID": "HRUN-c143d90a-312d-49a0-bc3f-5b3b99a63f4e-070367",
+    "Cookie": "_gd_session=VjcxdTJITzgrNFZaVHd3U3k5WCtnUEE1bXpHd05jQmNaTmNWK0UyWE56QjJCRHU1SWdEV29rdWNXZGVyQytETlZ2ZVQ4WWJrNFhmRC9sMmVmZCthb3dlY1ptc3RQUjl1bzg5ZjUzRDJSZUxLekZqY0NNVUx5Sy9sRE9jVG9DbW81cGU5QTc4U3lFYVJ5cTZCdUk4dnZRPT0tLUZXVWhUbGZkYldFYkpOYU5qTDh6M1E9PQ%3D%3D--e2fbc9f772ae58364905d367701034a614dfb6fa; referer_url=https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ; start_filling_time_yNxDGQ=1606300070; Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f=1603705893; Hm_lvt_47cd03e974df6869353431fe4f4d6b2f=1602214492,1602224981,1602225263,1603435846; _caid=IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6; _ga=GA1.2.669479930.1597286832; _gat_gtag_UA_48208031_13=1; _gd_session=MGwxamNkNU9NSkd2UkZTZEtKd1d0MmgrTy9PejVxL0RWMWM3TkNsSnNBR3NGWnhkeTljU0M5d3VqOHZ1TkdSSkk3ZzBTMWV4YXdBNDFwSFBXV0xiMFN2dEwweGNMYmpOcFRneGRZUFpQb3A4a1pieFBDRlFJUThnRnNwY3VzWGw0MTBwMyt6L1JwYkYxZkxpV0JSUmxRPT0tLWY4RDh2UXpLRXE4dXRuSnllMEprSmc9PQ%3D%3D--430c782dbfd2a67de3931a28d60ca0534ea6836f; _gd_sid=IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43; _gd_sid_fusion=IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61; _gd_sid_mo=IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7; _gd_sid_staging=IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0; _gd_sid_uat=IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843; _gd_sid_usd=IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be; _gid=GA1.2.1051440085.1603676790; _jinshuju_ut=IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611; _smt_uid=5f4c6fcb.35bf55f7; change_theme_btn_clicked_midautumn=1579600505; country_code=CN; csrf_token=9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==; filled_form_scene=form; has_visited_dashboard_in_two_days=true; jsj_locale=zh-CN; jsj_uid=ec5ce3b2-5149-4620-b475-e2a633d5dccf; last_fill_entry_token=22QXNuno; mixpanel_event_history=form_updated; start_filling_time_yNxDGQ=1603705891"
+}
+cookies  : {
+    "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603705893",
+    "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1602214492,1602224981,1602225263,1603435846",
+    "_caid": "IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6",
+    "_ga": "GA1.2.669479930.1597286832",
+    "_gat_gtag_UA_48208031_13": "1",
+    "_gd_session": "VjcxdTJITzgrNFZaVHd3U3k5WCtnUEE1bXpHd05jQmNaTmNWK0UyWE56QjJCRHU1SWdEV29rdWNXZGVyQytETlZ2ZVQ4WWJrNFhmRC9sMmVmZCthb3dlY1ptc3RQUjl1bzg5ZjUzRDJSZUxLekZqY0NNVUx5Sy9sRE9jVG9DbW81cGU5QTc4U3lFYVJ5cTZCdUk4dnZRPT0tLUZXVWhUbGZkYldFYkpOYU5qTDh6M1E9PQ%3D%3D--e2fbc9f772ae58364905d367701034a614dfb6fa",
+    "_gd_sid": "IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43",
+    "_gd_sid_fusion": "IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61",
+    "_gd_sid_mo": "IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7",
+    "_gd_sid_staging": "IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0",
+    "_gd_sid_uat": "IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843",
+    "_gd_sid_usd": "IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be",
+    "_gid": "GA1.2.1051440085.1603676790",
+    "_jinshuju_ut": "IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611",
+    "_smt_uid": "5f4c6fcb.35bf55f7",
+    "change_theme_btn_clicked_midautumn": "1579600505",
+    "country_code": "CN",
+    "csrf_token": "9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==",
+    "filled_form_scene": "form",
+    "has_visited_dashboard_in_two_days": "true",
+    "jsj_locale": "zh-CN",
+    "jsj_uid": "ec5ce3b2-5149-4620-b475-e2a633d5dccf",
+    "last_fill_entry_token": "22QXNuno",
+    "mixpanel_event_history": "form_updated",
+    "start_filling_time_yNxDGQ": "1606300070",
+    "referer_url": "https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ"
+}
+body     : {
+    "operationName": "CreatePublishedFormEntry",
+    "variables": {
+        "input": {
+            "formId": "yNxDGQ",
+            "entryAttributes": {
+                "field_2": "zangsan 123"
+            },
+            "captchaData": null,
+            "weixinAccessToken": null,
+            "xFieldWeixinOpenid": null,
+            "weixinInfo": null,
+            "prefilledParams": "",
+            "embedded": false,
+            "backgroundImage": false,
+            "formMargin": false,
+            "hasPreferential": false,
+            "fillingDuration": 5
+        }
+    },
+    "extensions": {
+        "persistedQuery": {
+            "version": 1,
+            "sha256Hash": "4cd6a9aef2820b2c3215f6ddfa87093869461f76f3f2016738f4307268a7df98"
+        }
+    }
+}
+
+2020-11-25 18:27:50.640 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Wed, 25 Nov 2020 10:27:50 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "nginx/1.12.2",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff",
+    "X-Download-Options": "noopen",
+    "X-Permitted-Cross-Domain-Policies": "none",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "ETag": "W/\"ab1c1fed60da9aafa2b1b1d1f192e3f9\"",
+    "Cache-Control": "max-age=0, private, must-revalidate",
+    "Set-Cookie": "entry_token=E5Sdbm7G; path=/f/yNxDGQ; expires=Wed, 25 Nov 2020 11:27:50 GMT, last_fill_entry_token=E5Sdbm7G; domain=.mo.jinshuju.net; path=/; expires=Wed, 25 Nov 2020 11:27:50 GMT, gd_ssf=MTYwNjMwMDA3MA%3D%3D--049e0c061428d098cf1e1a798d33490e0b93b616; path=/f/yNxDGQ, formSubmitSuccess=1; path=/f/yNxDGQ; expires=Wed, 25 Nov 2020 10:28:50 GMT, _gd_session=MnFoWEhoNFUrMTlHRU1mQmc0U2pBdWFUMkd2WGw0Mm1OeCtuSTV2YUV4dkJ4L3FlVnB0NEtVd2FUWDgyQUtFVGM2a0h2OGRrcHJNNitRTnd1TUdGb3JFU1BadmJrdTZsbUQwT1J2bXc2SjRrK2VSRDluTEdaUVNoVzlFRkNKN2hSOW94MTUxSCtPeEVJNE9mWGpxeC9RPT0tLTAxVG9tTllqb0ZYSXV6UmpFdER5K1E9PQ%3D%3D--918d8cf5127726a6ca871ce972815bc52384d35c; path=/; HttpOnly, start_filling_time_yNxDGQ=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT",
+    "X-Request-Id": "7b706de1-c2ca-4533-9d3d-dba4a8004861",
+    "X-Runtime": "0.236029",
+    "Vary": "Origin",
+    "Strict-Transport-Security": "max-age=60; includeSubdomains"
+}
+cookies  : {
+    "last_fill_entry_token": "E5Sdbm7G",
+    "_gd_session": "MnFoWEhoNFUrMTlHRU1mQmc0U2pBdWFUMkd2WGw0Mm1OeCtuSTV2YUV4dkJ4L3FlVnB0NEtVd2FUWDgyQUtFVGM2a0h2OGRrcHJNNitRTnd1TUdGb3JFU1BadmJrdTZsbUQwT1J2bXc2SjRrK2VSRDluTEdaUVNoVzlFRkNKN2hSOW94MTUxSCtPeEVJNE9mWGpxeC9RPT0tLTAxVG9tTllqb0ZYSXV6UmpFdER5K1E9PQ%3D%3D--918d8cf5127726a6ca871ce972815bc52384d35c",
+    "entry_token": "E5Sdbm7G",
+    "formSubmitSuccess": "1",
+    "gd_ssf": "MTYwNjMwMDA3MA%3D%3D--049e0c061428d098cf1e1a798d33490e0b93b616"
+}
+encoding : utf-8
+content_type : application/json; charset=utf-8
+body     : {
+    "data": {
+        "createPublishedFormEntry": {
+            "errors": null,
+            "redirectUrl": "https://mo.jinshuju.net/f/yNxDGQ/success?e_token=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjpbIkU1U2RibTdHIiwiNWY5Njk5NTE1YjY1MTYyNmJhOGJiZjI4Il0sImV4cCI6MTYwNjM4NjQ3MH0.1Wn6sBFJyBuEavZ-0Bp-_p-rhHTvwgkZgdMZHbhZidk",
+            "__typename": "CreatePublishedFormEntryPayload"
+        }
+    }
+}
+
+2020-11-25 18:27:50.640 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 270.7 ms, response_length: 0 bytes
+2020-11-25 18:27:50.640 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-11-25 18:27:50.641 | INFO     | httprunner.runner:__run_step:304 - run step end: 提交数据 <<<<<<
+
+2020-11-25 18:27:50.641 | INFO     | httprunner.runner:__run_step:292 - run step begin: 跳转到success >>>>>>
+2020-11-25 18:27:50.997 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.50.184, Port: 56784
+2020-11-25 18:27:50.997 | DEBUG    | httprunner.client:request:194 - server IP: 161.189.30.223, Port: 443
+2020-11-25 18:27:50.998 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://mo.jinshuju.net/f/yNxDGQ/success
+headers  : {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
+    "accept-encoding": "gzip, deflate, br",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Connection": "keep-alive",
+    "pragma": "no-cache",
+    "cache-control": "no-cache",
+    "upgrade-insecure-requests": "1",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-user": "?1",
+    "sec-fetch-dest": "document",
+    "referer": "https://mo.jinshuju.net/f/yNxDGQ",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "HRUN-Request-ID": "HRUN-c143d90a-312d-49a0-bc3f-5b3b99a63f4e-070641",
+    "Cookie": "entry_token=E5Sdbm7G; formSubmitSuccess=1; gd_ssf=MTYwNjMwMDA3MA%3D%3D--049e0c061428d098cf1e1a798d33490e0b93b616; last_fill_entry_token=E5Sdbm7G; _gd_session=MnFoWEhoNFUrMTlHRU1mQmc0U2pBdWFUMkd2WGw0Mm1OeCtuSTV2YUV4dkJ4L3FlVnB0NEtVd2FUWDgyQUtFVGM2a0h2OGRrcHJNNitRTnd1TUdGb3JFU1BadmJrdTZsbUQwT1J2bXc2SjRrK2VSRDluTEdaUVNoVzlFRkNKN2hSOW94MTUxSCtPeEVJNE9mWGpxeC9RPT0tLTAxVG9tTllqb0ZYSXV6UmpFdER5K1E9PQ%3D%3D--918d8cf5127726a6ca871ce972815bc52384d35c; referer_url=https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ; Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f=1603705893; Hm_lvt_47cd03e974df6869353431fe4f4d6b2f=1602214492,1602224981,1602225263,1603435846; _caid=IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6; _ga=GA1.2.669479930.1597286832; _gat_gtag_UA_48208031_13=1; _gd_session=OTByL3BlbnJkVS9MblRkU0U4NFVPTW9PaWwvQlQ1cFlLdTZuYWgrUWV0Zmk5MUhTQStmRUVtNEE4UHp3cmdSOVJqMlVrY01ZMFBIaFhvL1oyMXpGQWtXOEgrSlpGNnhXSDcxS2x4OFRPcUE1Ynlsb3BycmRDdDUzQzg1S29ySnI5c2VNd3M0QUhiOXJFWE8rd0ZCMUhRPT0tLWR5N2N2NVBZNW5iWWxQM1Z6RXptS1E9PQ%3D%3D--b0f1d6296b8a00b8bb7bbefd08092ce62519c04e; _gd_sid=IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43; _gd_sid_fusion=IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61; _gd_sid_mo=IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7; _gd_sid_staging=IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0; _gd_sid_uat=IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843; _gd_sid_usd=IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be; _gid=GA1.2.1051440085.1603676790; _jinshuju_ut=IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611; _smt_uid=5f4c6fcb.35bf55f7; change_theme_btn_clicked_midautumn=1579600505; country_code=CN; csrf_token=9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==; entry_token=m7eYgiUO; filled_form_scene=form; formSubmitSuccess=1; gd_ssf=MTYwMzcwNTg5OA%3D%3D--b99a57c5bc2f57b64a2c49d8fcbedce01cdcf723; has_visited_dashboard_in_two_days=true; jsj_locale=zh-CN; jsj_uid=ec5ce3b2-5149-4620-b475-e2a633d5dccf; last_fill_entry_token=m7eYgiUO; mixpanel_event_history=form_updated"
+}
+cookies  : {
+    "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1603705893",
+    "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1602214492,1602224981,1602225263,1603435846",
+    "_caid": "IjVkZDYyNjU0NjZhYjMzNDZhNzI5MjA3NCI%3D--d141bd1f24ec3955b11ea186700716f2a6e71db6",
+    "_ga": "GA1.2.669479930.1597286832",
+    "_gat_gtag_UA_48208031_13": "1",
+    "_gd_session": "MnFoWEhoNFUrMTlHRU1mQmc0U2pBdWFUMkd2WGw0Mm1OeCtuSTV2YUV4dkJ4L3FlVnB0NEtVd2FUWDgyQUtFVGM2a0h2OGRrcHJNNitRTnd1TUdGb3JFU1BadmJrdTZsbUQwT1J2bXc2SjRrK2VSRDluTEdaUVNoVzlFRkNKN2hSOW94MTUxSCtPeEVJNE9mWGpxeC9RPT0tLTAxVG9tTllqb0ZYSXV6UmpFdER5K1E9PQ%3D%3D--918d8cf5127726a6ca871ce972815bc52384d35c",
+    "_gd_sid": "IjVmOTY5MzBkZGUxZDBkZDQ3ZDRjNWM3NyI%3D--161a2f947d29a2fe1af6f33233e436d694461f43",
+    "_gd_sid_fusion": "IjVmOTBlODU2MGJjMmIzNjI2ZTE0ZGZiYSI%3D--dcfd5b67261ee167eca04cea0aeabbfe075b7f61",
+    "_gd_sid_mo": "IjVmOGZlMGIxNWI2NTE2NjZkOGI0ZTQ4YyI%3D--8228f70e23423567053db53f1b2e443dbee61cf7",
+    "_gd_sid_staging": "IjVmOTE0MTY4NmVjNWQ5NTAxZDI1OTJiNCI%3D--10e12a95c567454d8c89a8c774bb36d3e3fc25a0",
+    "_gd_sid_uat": "IjVmOTJhOTdjZDQ5NmNlMzU4NDc4NjY0MiI%3D--0259d10c97406fcd717636d370ea8c2a1c050843",
+    "_gd_sid_usd": "IjVmNzNlNjUzZTVjZGM0MjlkZDRiN2RmNyI%3D--e94c00da46872bc61395523f6815fb36551bc6be",
+    "_gid": "GA1.2.1051440085.1603676790",
+    "_jinshuju_ut": "IjVjOGI2YTBkOTYwMjY4N2U0OGI4Zjg4YSI%3D--3d0d333baebbb142e894251a445237f0e74cb611",
+    "_smt_uid": "5f4c6fcb.35bf55f7",
+    "change_theme_btn_clicked_midautumn": "1579600505",
+    "country_code": "CN",
+    "csrf_token": "9hmfWFLktYZ8bc8n+Wa9kxxN3lGHEuzhh3ELQ06nOpcYHTO9WZYxUMTUeCT3744RHuyEj7LAChqANUrpYFjSIg==",
+    "entry_token": "E5Sdbm7G",
+    "filled_form_scene": "form",
+    "formSubmitSuccess": "1",
+    "gd_ssf": "MTYwNjMwMDA3MA%3D%3D--049e0c061428d098cf1e1a798d33490e0b93b616",
+    "has_visited_dashboard_in_two_days": "true",
+    "jsj_locale": "zh-CN",
+    "jsj_uid": "ec5ce3b2-5149-4620-b475-e2a633d5dccf",
+    "last_fill_entry_token": "E5Sdbm7G",
+    "mixpanel_event_history": "form_updated",
+    "referer_url": "https%3A%2F%2Fmo.jinshuju.net%2Ff%2FyNxDGQ"
+}
+body     : None
+
+2020-11-25 18:27:50.999 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Wed, 25 Nov 2020 10:27:50 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "nginx/1.12.2",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff",
+    "X-Download-Options": "noopen",
+    "X-Permitted-Cross-Domain-Policies": "none",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "ETag": "W/\"c607f9aafd431c809555a7ab8d1fc1f1\"",
+    "Cache-Control": "max-age=0, private, must-revalidate",
+    "Set-Cookie": "_gd_session=QVlFeVFINk55NUhVRFFaSVBod255RkVQM0orUkh6dzFVckdTdnBKaWtPTXhRS0NPWUFYektDdVgvc1I5aU5Ea2R0YWVUd3BSRCtJajRvaXpyMlFhZEcvek9zdmxlRkJRWFBjTEhMZnppeDIvbGh1STJjYXdCVXh5RmJGaXlYK1NnQ0JvaVY1VlNxbUZpdzgrVGx2N29nPT0tLVA5STRJbXJoQUMwYlQ1RzduNDRZRXc9PQ%3D%3D--74feacafeb081b5a8f0a63a1ff837db01648ee3b; path=/; HttpOnly",
+    "X-Request-Id": "28ec4924-1db7-468c-8306-2ddd3056418d",
+    "X-Runtime": "0.142241",
+    "Vary": "Origin",
+    "Strict-Transport-Security": "max-age=60; includeSubdomains"
+}
+cookies  : {
+    "_gd_session": "QVlFeVFINk55NUhVRFFaSVBod255RkVQM0orUkh6dzFVckdTdnBKaWtPTXhRS0NPWUFYektDdVgvc1I5aU5Ea2R0YWVUd3BSRCtJajRvaXpyMlFhZEcvek9zdmxlRkJRWFBjTEhMZnppeDIvbGh1STJjYXdCVXh5RmJGaXlYK1NnQ0JvaVY1VlNxbUZpdzgrVGx2N29nPT0tLVA5STRJbXJoQUMwYlQ1RzduNDRZRXc9PQ%3D%3D--74feacafeb081b5a8f0a63a1ff837db01648ee3b"
+}
+encoding : utf-8
+content_type : text/html; charset=utf-8
+body     : <!DOCTYPE html>
+<html data-embedded="" lang="zh-CN" data-from-china="true">
+<head>
+  <meta charset="utf-8">
+  <title>单行文本正常提交</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9036a76073","applicationID":"233718273","transactionName":"JVwKFRNZVVtTF0kTQARfDRIJU11oUAoUDhoVRgcCBEVKUkVKFQtaEQ==","queueTime":1,"applicationTime":142,"agent":""}</script>
+<script>(window.NREUM ... OMITTED 29118 CHARACTORS ...
+
+2020-11-25 18:27:50.999 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 355.56 ms, response_length: 0 bytes
+2020-11-25 18:27:50.999 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-11-25 18:27:50.999 | INFO     | httprunner.runner:__run_step:304 - run step end: 跳转到success <<<<<<
+
+2020-11-25 18:27:51.005 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/tianliangliang/PycharmProjects/20201005/logs/c143d90a-312d-49a0-bc3f-5b3b99a63f4e.run.log
