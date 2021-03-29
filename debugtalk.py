@@ -38,10 +38,11 @@ def read_yaml(testcase_name):
     case_data = yaml.safe_load(f)[testcase_name]
     format_case_data = []
     for i in case_data:
+        print(i)
         format_case_data.append(tuple(i.values()))
 
     return format_case_data
-print(read_yaml("get_candlestick_test"))
+read_yaml("get_candlestick_test")
 def get_field_codetype(html_text):
     html_text = str(html_text, encoding="utf-8")
     m = re.findall(r"GD.publishedFormData = (.+?);", html_text)

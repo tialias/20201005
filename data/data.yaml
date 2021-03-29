@@ -72,7 +72,7 @@ text_banlist_test:
 get_candlestick_test:
   -
     desc: "get_candlestick接口测试" 
-    form_data: {'field_2':'zhangsan123'}
+    params: {"instrument_name": "BTC_USDT", "timeframe": "5m"}
     response_code_path: "status_code"
     response_message_path: ""
     assert_code: 200

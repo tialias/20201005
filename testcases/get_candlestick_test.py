@@ -10,7 +10,7 @@ class TestCaseGetCandlestick(HttpRunner):
     config = Config("testcase description").verify(False).base_url("${ENV(UAT_BASE_URL)")
      @pytest.mark.parametrize("param", Parameters(  
 
-        {"desc": ["${read_yaml()}"[0]}  
+       "${read_yaml()}"
 
     ))  
 
