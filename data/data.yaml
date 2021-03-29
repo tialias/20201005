@@ -68,3 +68,12 @@ text_banlist_test:
     response_message_path: "body.data.createPublishedFormEntry.errors[0].message"
     assert_code: 400
     assert_message: "「李四」不能提交"
+
+get_candlestick_test:
+  -
+    desc: "get_candlestick接口测试" 
+    form_data: {'field_2':'zhangsan123'}
+    response_code_path: "status_code"
+    response_message_path: ""
+    assert_code: 200
+    assert_message: ""
