@@ -3,26 +3,25 @@
 
 
 from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
-
+from httprunner import Parameters
+import pytest
 
 class TestCaseGetCandlestick(HttpRunner):
+    @pytest.mark.parametrize("param", Parameters(
+        {"desc-params":"${read_yaml()}"}
+       )
+       )
+    def test_start(self, param):
+        super().test_start(param)
 
-    config = Config("testcase description").verify(False).base_url("${ENV(UAT_BASE_URL)")
-     @pytest.mark.parametrize("param", Parameters(  
-
-       "${read_yaml()}"
-
-    ))  
-
-    def test_start(self, param):  
-
-        super().test_start(param)  
-
+    config = (
+        Config("$desc").verify(False).base_url("${ENV(UAT_BASE_URL)")
+    )
     teststeps = [
         Step(
             RunRequest("/v2/public/get-candlestick")
             .get("v2/public/get-candlestick")
-            .with_params(**{"instrument_name": "BTC_USDT", "timeframe": "5m"})
+            .with_params(** "$params")
             .with_headers(
                 **{
                     "cache-control": "max-age=0",

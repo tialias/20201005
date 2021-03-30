@@ -73,7 +73,9 @@ get_candlestick_test:
   -
     desc: "get_candlestick接口测试" 
     params: {"instrument_name": "BTC_USDT", "timeframe": "5m"}
-    response_code_path: "status_code"
-    response_message_path: ""
-    assert_code: 200
-    assert_message: ""
+
+  -
+    desc: "get_candlestick接口测试1" 
+    params: {"instrument_name": "BTC_USDT123", "timeframe": "5m"}
+
+
